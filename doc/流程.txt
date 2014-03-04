@@ -1,7 +1,0 @@
-1.用快捷開啓檔案，關閉wifi
-2.[midi control],[udp]連線
-3.[nedsent~]連線,麥克風偵測[tgl]
-4.[k_win] render 1024 650,1440 120
-5.計時,Fade in,soundflower
-6.記得開提示 k_gui
-7.worm,ocean 
