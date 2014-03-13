@@ -1,4 +1,4 @@
-#N canvas 615 268 825 458 10;
+#N canvas 264 323 825 458 10;
 #X obj 101 119 cnv 15 118 100 empty empty empty 20 12 0 14 -160200
 -66577 0;
 #N canvas 759 196 564 589 end 0;
@@ -104,19 +104,19 @@
 ;
 #X obj 204 36 loadbang;
 #X obj 110 181 hsl 80 15 0.05 0.4 0 0 empty empty face 5 7 0 10 -262144
--1 -1 2573 1;
+-1 -1 6277 1;
 #X obj 110 163 hsl 80 15 0 5 0 0 empty empty length 5 6 0 10 -262144
--1 -1 2958 1;
+-1 -1 6236 1;
 #X obj 558 7 table \$0-theta_start 200;
 #X obj 558 27 table \$0-theta_end 200;
 #X obj 558 46 table \$0-phi_start 200;
 #X obj 558 68 table \$0-phi_end 200;
 #X obj 558 89 table \$0-phi_motion 200;
 #X obj 558 107 table \$0-theta_motion 200;
-#N canvas 607 292 517 470 (subpatch) 0;
+#N canvas 349 292 517 470 (subpatch) 1;
 #X obj 0 39 s \$0-size;
-#X obj 3 0 hsl 80 15 2 50 0 0 empty empty N=19 8 8 0 10 -262144 -1
--1 2819 1;
+#X obj 3 0 hsl 80 15 2 50 0 0 empty empty N=22 8 8 0 10 -262144 -1
+-1 3417 1;
 #X obj 0 19 int;
 #X obj -43 74 outlet;
 #X msg 96 54 label N=\$1;
@@ -139,11 +139,17 @@
 #X obj 0 -121 r \$0-show;
 #X obj 0 -97 sel 1;
 #X obj 62 -36 r \$0-m-b-num;
+#X obj 185 -14 t f f;
+#X obj 188 19 -;
+#X floatatom 190 45 5 0 0 0 - - -;
+#X obj 189 73 > 0;
+#X obj 185 109 s toclicksound;
 #X connect 1 0 2 0;
 #X connect 1 0 5 1;
 #X connect 1 0 3 0;
 #X connect 2 0 0 0;
 #X connect 2 0 4 0;
+#X connect 2 0 24 0;
 #X connect 4 0 1 0;
 #X connect 5 0 15 0;
 #X connect 6 0 17 0;
@@ -167,10 +173,15 @@
 #X connect 21 0 22 0;
 #X connect 22 0 20 0;
 #X connect 23 0 14 0;
+#X connect 24 0 25 1;
+#X connect 24 1 25 0;
+#X connect 25 0 26 0;
+#X connect 26 0 27 0;
+#X connect 27 0 28 0;
 #X coords 0 1 100 -1 85 15 1 0 0;
 #X restore 106 122 graph;
 #X obj 110 143 hsl 80 15 0.001 8 0 0 empty empty radius 5 6 0 10 -262144
--1 -1 1679 1;
+-1 -1 4216 1;
 #X msg 204 59 0;
 #X obj 560 128 table \$0-kk 200;
 #X obj 560 150 table \$0-dir 200;
@@ -439,7 +450,7 @@
 #X obj 445 257 s \$0-tbang;
 #X msg 308 208 \$1 10000;
 #X obj 408 94 f 1;
-#X obj 408 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 408 121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 521 -14 r hid;
 #X obj 521 36 t a a;
@@ -767,11 +778,11 @@
 #X obj 181 117 randomF 360;
 #X obj 270 118 randomF 360;
 #X obj 106 140 t f b;
-#X msg 132 165 8814.15;
+#X msg 132 165 1421.72;
 #X obj 176 142 t f b;
-#X msg 202 167 8814.15;
+#X msg 202 167 1421.72;
 #X obj 259 142 t f b;
-#X msg 285 167 8814.15;
+#X msg 285 167 1421.72;
 #X obj 368 85 inlet;
 #X msg 368 113 set \$1;
 #X connect 0 0 6 0;
@@ -982,7 +993,7 @@
 #X obj 443 34 sel 0 1;
 #X obj 377 74 t f f;
 #X floatatom 428 104 5 0 0 0 - - -;
-#X obj 443 10 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 443 10 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 443 57 -1;
 #X msg 463 77 1;
@@ -1032,7 +1043,7 @@
 #X msg 221 160 0;
 #X obj 165 107 t b b;
 #X obj 127 135 t b b;
-#X msg 153 158 1858.18;
+#X msg 153 158 194.886;
 #X obj 219 76 r \$0-go-speed;
 #X msg 219 99 set \$1;
 #X msg 127 158 1;
@@ -1647,7 +1658,7 @@
 #X connect 25 0 24 1;
 #X restore 347 49 pd move======================;
 #X obj 110 202 hsl 80 15 2000 75 0 0 empty empty speed 5 7 0 10 -262144
--1 -1 582 1;
+-1 -1 7408 1;
 #X floatatom 53 251 5 0 0 0 - - -;
 #X obj 53 317 s \$0-go-speed;
 #N canvas 667 285 578 356 net======================= 0;
@@ -2087,7 +2098,7 @@
 #X obj 182 -9 ctlin 32;
 #N canvas 608 372 450 300 2color 0;
 #X obj 100 146 s \$0-2color;
-#X obj 100 100 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 100 100 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 41 74 inlet;
 #X connect 1 0 0 0;
@@ -2111,7 +2122,7 @@
 #X obj 142 118 f;
 #X obj 170 119 + 1;
 #X obj 198 119 % 2;
-#X obj 100 100 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 100 100 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X connect 0 0 4 0;
 #X connect 1 0 2 0;

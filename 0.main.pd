@@ -1,4 +1,4 @@
-#N canvas 756 22 518 631 10;
+#N canvas 871 22 526 723 10;
 #X declare -lib mrpeach;
 #X declare -lib mrpeach;
 #X declare -path child;
@@ -32,6 +32,7 @@
 #X obj 166 78 declare -path space;
 #X obj 392 -9 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
+#X text 173 33 leapmotion;
 #X connect 2 0 3 0;
 #X connect 4 0 5 0;
 #X connect 6 0 4 0;
@@ -48,11 +49,10 @@
 #X connect 16 0 11 0;
 #X connect 16 1 9 0;
 #X connect 19 0 13 0;
-#X restore 44 328 pd meta;
+#X restore -163 256 pd meta;
 #X obj -5 -144 k_mic;
 #X obj -111 11 k_effect;
 #X obj -111 276 k_leap;
-#X obj -394 10 k_win;
 #X obj -281 280 planet;
 #X obj -281 206 ship;
 #X obj -197 280 ball;
@@ -62,5 +62,6 @@
 #X obj -394 236 vj_ocean;
 #X obj -394 276 vj_worm;
 #X obj -394 315 vj_sun;
+#X obj -394 10 k_win;
 #X connect 2 0 5 0;
 #X connect 2 1 5 1;
