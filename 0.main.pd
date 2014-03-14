@@ -1,4 +1,4 @@
-#N canvas 871 22 526 723 10;
+#N canvas 871 22 514 724 10;
 #X declare -lib mrpeach;
 #X declare -lib mrpeach;
 #X declare -path child;
@@ -7,7 +7,6 @@
 #X declare -path space;
 #X declare -lib mrpeach;
 #X obj 11 419 k_udp;
-#X obj -269 359 s_motion-r;
 #X obj -5 -219 k_ui;
 #X obj -394 359 s_motion-b;
 #N canvas 601 413 793 332 meta 0;
@@ -63,5 +62,6 @@
 #X obj -394 276 vj_worm;
 #X obj -394 315 vj_sun;
 #X obj -394 10 k_win;
-#X connect 2 0 5 0;
-#X connect 2 1 5 1;
+#X obj -269 359 s_motion-r;
+#X connect 1 0 4 0;
+#X connect 1 1 4 1;
