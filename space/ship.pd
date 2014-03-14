@@ -1,7 +1,7 @@
 #N canvas 460 29 884 727 10;
 #X obj 101 114 cnv 15 78 55 empty empty empty 20 12 0 14 -189697 -66577
 0;
-#X obj 104 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 104 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 103 179 gemhead;
 #X obj 105 641 glsl_program;
@@ -37,12 +37,12 @@
 #X obj -134 283 GLdefine GL_FRONT;
 #X msg 54 58 0;
 #X obj 126 116 hsl 50 15 0 0.05 0 0 empty empty jump 3 8 0 10 -262144
--1 -1 209 1;
+-1 -1 930 1;
 #X obj 101 236 t a b;
 #X obj 147 236 f;
 #X obj 101 275 rotateXYZ 0 0 0;
 #X obj 213 237 fmod 360;
-#X obj 173 237 + 0.5;
+#X obj 173 236 + 0.5;
 #X floatatom 72 555 5 0 0 0 - - -;
 #X msg 72 576 K \$1;
 #X obj 246 449 + 10;
@@ -64,7 +64,7 @@
 #X obj 230 700 line;
 #X obj -180 465 model;
 #X obj 126 133 hsl 50 15 0.3 40 0 0 empty empty size 3 8 0 10 -262144
--1 -1 4500 1;
+-1 -1 2678 1;
 #X obj -39 463 line;
 #X obj 103 203 translateXYZ 0 -0.3 0;
 #X obj -24 369 loadbang;
@@ -73,7 +73,7 @@
 #X msg 66 696 color 0.1 0.4 0.8 \$1;
 #X msg -24 399 open ship.obj;
 #X obj 126 151 hsl 50 15 0.1 10 0 0 empty empty rotate 3 8 0 10 -262144
--1 -1 504 1;
+-1 -1 4900 1;
 #X floatatom 293 183 5 0 0 0 - - -;
 #X obj 293 208 k_range 0 127 0 0.1;
 #X obj 293 158 ctlin 6;
@@ -107,6 +107,8 @@
 #X msg -39 442 \$1 1000;
 #X msg 251 670 0.2 10000;
 #X msg 235 649 0 10000;
+#X floatatom 189 161 5 0 0 0 - - -;
+#X obj 190 185 / 2.5;
 #X connect 1 0 53 0;
 #X connect 1 0 76 0;
 #X connect 1 0 82 0;
@@ -189,8 +191,8 @@
 #X connect 62 0 56 0;
 #X connect 63 0 3 0;
 #X connect 64 0 56 0;
-#X connect 65 0 36 1;
 #X connect 65 0 91 0;
+#X connect 65 0 99 0;
 #X connect 66 0 67 0;
 #X connect 67 0 31 0;
 #X connect 68 0 66 0;
@@ -230,4 +232,6 @@
 #X connect 96 0 58 0;
 #X connect 97 0 55 0;
 #X connect 98 0 55 0;
+#X connect 99 0 100 0;
+#X connect 100 0 36 1;
 #X coords 0 -1 1 1 80 70 1 100 100;

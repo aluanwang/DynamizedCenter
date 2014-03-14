@@ -21,11 +21,11 @@
 #X obj 132 161 +~;
 #X obj 144 290 clip~ -1 1;
 #X obj 133 222 +~;
-#X obj 141 406 throw~ u-all-l;
-#X obj 234 405 throw~ u-all-r;
+#X obj 144 433 throw~ u-all-l;
+#X obj 237 432 throw~ u-all-r;
 #X obj 279 196 r g10;
 #X obj 145 339 *~;
-#X obj 142 363 *~;
+#X obj 145 390 *~;
 #X obj 267 322 line~;
 #X obj 362 233 r g10-1;
 #X obj 95 263 bp~ 1300 7;
@@ -38,6 +38,7 @@
 #X obj 297 233 *~ 0.1;
 #X obj 297 259 +~ 0.025;
 #X msg 270 294 \$1 10000;
+#X obj 144 367 *~ 2;
 #X connect 0 0 11 0;
 #X connect 1 0 11 0;
 #X connect 2 0 1 0;
@@ -62,7 +63,7 @@
 #X connect 21 0 29 0;
 #X connect 21 0 30 0;
 #X connect 24 0 38 0;
-#X connect 25 0 26 0;
+#X connect 25 0 39 0;
 #X connect 26 0 22 0;
 #X connect 26 0 23 0;
 #X connect 27 0 26 1;
@@ -78,3 +79,4 @@
 #X connect 36 0 37 0;
 #X connect 37 0 25 1;
 #X connect 38 0 27 0;
+#X connect 39 0 26 0;
