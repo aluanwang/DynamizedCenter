@@ -1,4 +1,4 @@
-#N canvas 871 22 514 724 10;
+#N canvas 839 65 539 729 10;
 #X declare -lib mrpeach;
 #X declare -lib mrpeach;
 #X declare -path child;
@@ -6,10 +6,9 @@
 #X declare -path GLSL;
 #X declare -path space;
 #X declare -lib mrpeach;
-#X obj 11 419 k_udp;
+#X obj 10 420 k_udp;
 #X obj -5 -219 k_ui;
-#X obj -394 359 s_motion-b;
-#N canvas 601 413 793 332 meta 0;
+#N canvas 843 421 793 332 meta 0;
 #X obj 165 125 declare -path child;
 #X obj 166 148 declare -path moving;
 #X obj 166 173 loadbang;
@@ -32,6 +31,13 @@
 #X obj 392 -9 tgl 30 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 173 33 leapmotion;
+#X obj 25 -9 loadbang;
+#X msg 26 13 0;
+#X obj 57 17 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 84 -2 inlet;
+#X obj 26 45 gemhead 99999;
+#X obj 26 70 syphonserver aluan_pd;
 #X connect 2 0 3 0;
 #X connect 4 0 5 0;
 #X connect 6 0 4 0;
@@ -48,20 +54,29 @@
 #X connect 16 0 11 0;
 #X connect 16 1 9 0;
 #X connect 19 0 13 0;
-#X restore -163 256 pd meta;
+#X connect 21 0 22 0;
+#X connect 22 0 23 0;
+#X connect 23 0 25 0;
+#X connect 24 0 23 0;
+#X connect 25 0 26 0;
+#X restore -198 240 pd meta;
 #X obj -5 -144 k_mic;
-#X obj -111 11 k_effect;
 #X obj -111 276 k_leap;
 #X obj -281 280 planet;
 #X obj -281 206 ship;
 #X obj -197 280 ball;
-#X obj -395 -205 s_motion-u;
 #X obj -145 359 s_motion-s;
-#X obj 11 357 k_cpu;
-#X obj -394 236 vj_ocean;
-#X obj -394 276 vj_worm;
+#X obj 10 358 k_cpu;
+#X obj -394 277 vj_worm;
 #X obj -394 315 vj_sun;
-#X obj -394 10 k_win;
+#X obj -395 -205 s_motion-u;
 #X obj -269 359 s_motion-r;
-#X connect 1 0 4 0;
-#X connect 1 1 4 1;
+#X obj -198 221 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
+0 1;
+#X obj -394 237 vj_ocean;
+#X obj -111 10 k_effect;
+#X obj -394 10 k_win;
+#X obj -394 359 s_motion-b;
+#X connect 1 0 3 0;
+#X connect 1 1 3 1;
+#X connect 14 0 2 0;
