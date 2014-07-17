@@ -1,7 +1,12 @@
-#N canvas 449 206 414 563 10;
+#N canvas 451 157 402 566 10;
 #X declare -lib mrpeach;
 #X declare -lib mrpeach;
 #X declare -path child;
+#X declare -path ../k_obj;
+#X declare -path ../diy2;
+#X declare -path ../pmpd;
+#X declare -path ../netsend~;
+#X declare -path ../pd-tweener;
 #N canvas 648 113 634 726 fader 0;
 #X obj 500 84 r 3d;
 #N canvas 664 326 648 429 3d-sound&k_vol_l====================== 0
@@ -156,13 +161,13 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X obj 164 74 outlet~;
 #X obj 273 71 outlet~;
 #X obj 102 109 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0.299986 256;
+-262144 -1 -1 0 256;
 #X obj 151 109 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0.299986 256;
+-262144 -1 -1 0 256;
 #X obj 103 139 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0.299986 256;
+-262144 -1 -1 0 256;
 #X obj 153 139 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0.700014 256;
+-262144 -1 -1 0 256;
 #X obj -81 -133 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 44 -98 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -170,7 +175,7 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X obj 196 -117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 307 -121 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X msg -114 2 \$1 300;
 #X msg -3 7 \$1 300;
 #X msg 164 -5 \$1 300;
@@ -395,7 +400,7 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X restore 294 176 pd e-wave=====================;
 #N canvas 803 220 358 372 (subpatch) 0;
 #X obj 4 0 hsl 174 20 0 1 0 0 empty empty main_1 5 11 0 10 -1 -258113
--262144 17300 1;
+-262144 0 1;
 #X obj -102 -134 r u-all-vol;
 #X obj 1 71 s ctl-all;
 #X obj 1 -38 t f f;
@@ -624,8 +629,8 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X obj 395 544 k_cpu;
 #X obj 395 484 k_udp-2;
 #N canvas 803 220 358 372 (subpatch) 0;
-#X obj 4 0 hsl 174 20 0 2 0 0 empty empty gain_0.00890173 5 11 0 10
--1 -258113 -262144 77 1;
+#X obj 4 0 hsl 174 20 0 2 0 0 empty empty gain_1 5 11 0 10 -1 -258113
+-262144 8650 1;
 #X obj 1 48 line;
 #X obj 1 71 s ctl-gain;
 #X obj 1 -49 loadbang;
@@ -946,7 +951,7 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X connect 34 0 26 0;
 #X connect 34 1 26 1;
 #X coords 0 -1 1 1 380 520 2 100 100;
-#X restore 8 18 pd fader;
+#X restore 7 14 pd fader;
 #N canvas 200 410 316 270 synthesizer 0;
 #N canvas 340 251 450 300 meta 0;
 #X obj 37 89 loadbang;
@@ -956,6 +961,11 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X obj 120 145 print;
 #X obj 120 88 del 500;
 #X msg 120 114 ----------Sound----------;
+#X obj 38 -17 declare -path ../k_obj;
+#X obj 37 12 declare -path ../diy2;
+#X obj 72 192 declare -path ../pmpd;
+#X obj 71 221 declare -path ../netsend~;
+#X obj 72 245 declare -path ../pd-tweener;
 #X connect 0 0 1 0;
 #X connect 0 0 5 0;
 #X connect 5 0 6 0;
@@ -1051,15 +1061,15 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X obj 178 334 osc~;
 #X obj 167 213 mtof;
 #X obj 167 126 vsl 15 66 0 127 0 0 empty sl2 empty 0 -9 0 10 -4034
--1 -1 2252 1;
+-1 -1 1433 1;
 #X obj 178 305 +~;
 #X obj 196 238 osc~;
 #X obj 196 212 mtof;
 #X obj 196 126 vsl 15 66 0 127 0 0 empty sl3 empty 0 -9 0 10 -260097
--1 -1 1740 1;
+-1 -1 1228 1;
 #X obj 211 270 *~ 0;
 #X obj 228 126 vsl 15 66 0 1000 0 0 empty sl4 empty 0 -9 0 10 -4160
--1 -1 3744 1;
+-1 -1 4829 1;
 #X obj 163 419 osc~;
 #X obj 164 392 +~;
 #X obj 179 363 *~ 0;
@@ -1082,23 +1092,23 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X obj 189 534 line~;
 #X msg 189 514 \$1 50;
 #X obj 340 127 vsl 15 66 0 127 0 0 empty sl7 empty 0 -9 0 10 -4034
--1 -1 1075 1;
+-1 -1 102 1;
 #X obj 372 126 vsl 15 66 0 127 0 0 empty sl8 empty 0 -9 0 10 -260097
--1 -1 870 1;
+-1 -1 768 1;
 #X obj 404 127 vsl 15 66 0 1000 0 0 empty sl9 empty 0 -9 0 10 -4160
--1 -1 4959 1;
+-1 -1 4725 1;
 #X obj 434 127 vsl 15 66 0 1000 0 0 empty sl10 empty 0 -9 0 10 -4160
--1 -1 6240 1;
+-1 -1 5973 1;
 #X obj 312 126 vsl 15 66 0 127 0 0 empty sl6 empty 0 -9 0 10 -4034
--1 -1 2252 1;
+-1 -1 768 1;
 #X obj 258 126 vsl 15 66 0 1000 0 0 empty sl5 empty 0 -9 0 10 -4160
--1 -1 5447 1;
+-1 -1 6038 1;
 #X obj 138 126 vsl 15 66 0 127 0 0 empty sl1 empty 0 -9 0 10 -4034
--1 -1 409 1;
+-1 -1 1843 1;
 #X obj 285 126 vsl 15 66 0 1000 0 0 empty sl12 empty 0 -9 0 10 -4160
--1 -1 3932 1;
+-1 -1 4088 1;
 #X obj 109 128 vsl 15 66 0 127 0 0 empty sl11 empty 0 -9 0 10 -4034
--1 -1 2354 1;
+-1 -1 358 1;
 #N canvas 274 188 888 541 rand 0;
 #X obj 403 253 random 1000;
 #X obj 196 347 s sl1;
@@ -1719,9 +1729,9 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X obj 113 182 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 113 213 s mouseleft;
-#X obj 180 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 180 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 202 215 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 202 215 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 180 295 s mouseleft3;
 #X obj 202 246 s mouseright3;
@@ -1789,7 +1799,7 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X obj 419 154 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 419 223 s universe-tgl;
-#X obj 474 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 474 264 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 474 334 s u-all-vol;
 #X obj 520 251 loadbang;
@@ -2205,7 +2215,7 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X obj 301 414 throw~ no-effect-r;
 #X obj 128 409 throw~ no-effect-l;
 #X obj 308 88 r scrollvol;
-#X obj 483 71 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 483 71 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 462 291 *~;
 #X obj 462 314 *~;
@@ -2214,7 +2224,7 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X obj 483 43 r mouseleft3;
 #X obj 557 100 r mouseright3;
 #X obj 557 199 line~;
-#X obj 557 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 557 127 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 557 149 sel 1;
 #X obj 483 94 sel 1;
@@ -3234,4 +3244,4 @@ if($f2>$f1 && $f2>$f3 && $f2>$f4 \, 2 \, 0) \; if($f3>$f1 && $f3>$f2
 #X connect 70 0 58 0;
 #X connect 70 1 58 1;
 #X restore 167 86 pd Motion-b;
-#X restore 9 -6 pd synthesizer;
+#X restore 8 -10 pd synthesizer;
