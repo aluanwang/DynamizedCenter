@@ -1,4 +1,4 @@
-#N canvas 584 40 770 686 10;
+#N canvas 764 37 770 686 10;
 #X text 289 352 x = x0 + rsin(theta)*cos(phi);
 #X text 289 362 y = y0 + rsin(theta)*sin(phi);
 #X text 289 372 z = z0 + rcos(theta);
@@ -120,7 +120,7 @@
 #X connect 46 0 47 0;
 #X connect 47 0 48 0;
 #X restore 101 599 pd point-start;
-#N canvas 553 40 451 666 point-end 0;
+#N canvas 553 40 451 666 point-end 1;
 #X obj -137 424 translateXYZ;
 #X obj -114 298 t f f f;
 #X obj 44 296 t f f;
@@ -243,7 +243,7 @@
 #X obj 192 118 s toudp;
 #X obj 192 92 packOSC;
 #X obj 3 0 hsl 128 15 0 0.7 0 0 empty empty track-alpha 2 8 0 10 -262144
--1 -1 12700 1;
+-1 -1 0 1;
 #X obj 92 85 line;
 #X msg 92 63 \$1 2000;
 #X obj 21 161 s \$0-alpha;
@@ -284,7 +284,7 @@
 #X obj 55 88 s \$0-track;
 #X obj 1 -50 loadbang;
 #X obj 0 0 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -258113 -262144
--1 7;
+-1 0;
 #X msg 1 -25 0;
 #X obj 0 27 + 1;
 #X obj 9 194 s toudp;
@@ -560,21 +560,21 @@
 #X coords 0 1 100 -1 65 15 1 0 0;
 #X restore 106 156 graph;
 #X obj 109 174 hsl 60 15 0 100 0 0 empty empty 0 2 8 0 10 -262144 -1
--1 3363 1;
+-1 3717 1;
 #X obj 109 191 hsl 60 15 0 100 0 0 empty empty 1 2 8 0 10 -262144 -1
--1 944 1;
+-1 1711 1;
 #X obj 109 208 hsl 60 15 0 100 0 0 empty empty 2 2 8 0 10 -262144 -1
--1 1416 1;
+-1 3717 1;
 #X obj 109 225 hsl 60 15 0 100 0 0 empty empty 3 2 8 0 10 -262144 -1
--1 3658 1;
+-1 4720 1;
 #X obj 109 242 hsl 60 15 0 100 0 0 empty empty 4 2 8 0 10 -262144 -1
--1 4897 1;
+-1 1534 1;
 #X obj 109 259 hsl 60 15 0 100 0 0 empty empty 5 2 8 0 10 -262144 -1
--1 5310 1;
+-1 472 1;
 #X obj 109 276 hsl 60 15 0 100 0 0 empty empty 6 2 8 0 10 -262144 -1
--1 5487 1;
+-1 1121 1;
 #X obj 109 293 hsl 60 15 0 100 0 0 empty empty 7 2 8 0 10 -262144 -1
--1 3009 1;
+-1 5369 1;
 #X obj 3 62 b;
 #X obj 3 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -728,7 +728,7 @@
 #X obj 30 287 random 100;
 #X obj 29 312 random 100;
 #X obj 64 398 each-radius 6;
-#X obj 106 122 tgl 30 0 empty empty Auto 3 13 0 10 -262144 -1 -1 1
+#X obj 106 122 tgl 30 0 empty empty Auto 3 13 0 10 -262144 -1 -1 0
 1;
 #X obj 29 112 metro 2000;
 #X obj 256 399 each-radius 0;
@@ -1224,7 +1224,7 @@
 #X connect 16 0 14 0;
 #X connect 17 0 8 0;
 #X connect 18 0 10 0;
-#X restore 33 612 pd target;
+#X restore 43 630 pd target;
 #X connect 0 0 34 0;
 #X connect 1 0 7 0;
 #X connect 2 0 4 1;
@@ -1311,7 +1311,7 @@
 #N canvas 546 63 728 742 distance 0;
 #N canvas 716 119 450 300 (subpatch) 0;
 #X obj 3 0 hsl 60 15 0.05 0.9 0 0 empty empty distance 2 8 0 10 -262144
--1 -1 1600 1;
+-1 -1 0 1;
 #X obj 0 36 outlet;
 #X obj 11 -118 r touchosc;
 #X obj 11 -94 routeOSC /m-u;
@@ -1329,21 +1329,21 @@
 #X coords 0 1 100 -1 65 15 1 0 0;
 #X restore 126 151 graph;
 #X obj 129 170 hsl 60 15 0.1 0.9 0 0 empty empty 0 2 8 0 10 -262144
--1 -1 4304 1;
+-1 -1 0 1;
 #X obj 128 189 hsl 60 15 0.1 0.9 0 0 empty empty 1 2 8 0 10 -262144
--1 -1 1743 1;
+-1 -1 0 1;
 #X obj 128 206 hsl 60 15 0.1 0.9 0 0 empty empty 2 2 8 0 10 -262144
--1 -1 1765 1;
+-1 -1 0 1;
 #X obj 128 224 hsl 60 15 0.1 0.9 0 0 empty empty 3 2 8 0 10 -262144
--1 -1 3488 1;
+-1 -1 0 1;
 #X obj 128 241 hsl 60 15 0.1 0.9 0 0 empty empty 4 2 8 0 10 -262144
--1 -1 1614 1;
+-1 -1 0 1;
 #X obj 128 258 hsl 60 15 0.1 0.9 0 0 empty empty 5 2 8 0 10 -262144
--1 -1 2767 1;
+-1 -1 0 1;
 #X obj 128 275 hsl 60 15 0.1 0.9 0 0 empty empty 6 2 8 0 10 -262144
--1 -1 5180 1;
+-1 -1 0 1;
 #X obj 128 292 hsl 60 15 0.1 0.9 0 0 empty empty 7 2 8 0 10 -262144
--1 -1 3105 1;
+-1 -1 0 1;
 #N canvas 0 22 152 301 random 0;
 #X obj 16 142 randomF 0.85;
 #X obj 16 171 + 0.05;
@@ -1612,7 +1612,7 @@
 #X obj 436 391 line-phi-theta 7;
 #X obj 78 -62 moses 1.77;
 #X msg 135 -40 1.77;
-#X obj 107 117 tgl 30 0 empty empty Auto 3 13 0 10 -262144 -1 -1 1
+#X obj 107 117 tgl 30 0 empty empty Auto 3 13 0 10 -262144 -1 -1 0
 1;
 #X obj -66 35 metro 2000;
 #X obj 161 117 tgl 30 0 empty show-tgl-2 sel 5 15 0 10 -1 -1 -262144
@@ -2145,7 +2145,7 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X obj 209 359 r randomback;
 #N canvas 756 222 450 300 (subpatch) 0;
 #X obj 0 21 s \$0-partline-tgl;
-#X obj 0 0 tgl 15 0 empty empty line 17 7 0 10 -258113 -1 -162280 0
+#X obj 0 0 tgl 15 0 empty empty line 17 7 0 10 -258113 -1 -162280 1
 1;
 #X obj 123 70 s toudp;
 #X obj 123 44 packOSC;
@@ -2167,7 +2167,7 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X coords 0 1 100 -1 15 15 1 0 0;
 #X restore 108 237 graph;
 #N canvas 587 485 450 300 (subpatch) 0;
-#X obj 0 0 tgl 15 0 empty empty part 17 7 0 10 -258113 -1 -162280 0
+#X obj 0 0 tgl 15 0 empty empty part 17 7 0 10 -258113 -1 -162280 1
 1;
 #X obj 0 20 s \$0-part-tgl;
 #X obj 0 -114 loadbang;
@@ -2262,7 +2262,7 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #N canvas 114 285 666 497 (subpatch) 0;
 #X obj 0 -48 loadbang;
 #X obj 3 0 hsl 128 15 0.1 0.5 0 0 empty empty part-speed_[g] 8 8 0
-10 -262144 -1 -1 0 1;
+10 -262144 -1 -1 3900 1;
 #X floatatom 0 26 5 0 0 0 - - -;
 #X msg 0 -27 0.1;
 #X obj 89 185 s \$0-part-speed;
@@ -2518,7 +2518,6 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X obj 555 104 t b b;
 #X obj 555 176 t f f;
 #X obj 150 294 unpack f f f;
-#X obj 127 410 sphere 1.5 8;
 #X obj 319 20 r \$0-part-tgl;
 #X obj 319 71 line;
 #X msg 319 47 \$1 10000;
@@ -2531,6 +2530,8 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X obj 592 -41 route key_226;
 #X obj 137 111 spigot;
 #X obj 337 114 > 0;
+#X obj 127 409 facing;
+#X obj 127 436 circle 0.05;
 #X connect 0 0 7 0;
 #X connect 1 0 5 0;
 #X connect 2 0 11 1;
@@ -2539,15 +2540,15 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X connect 5 0 4 1;
 #X connect 5 1 4 2;
 #X connect 5 2 4 3;
-#X connect 6 0 39 0;
+#X connect 6 0 38 0;
 #X connect 7 0 13 0;
 #X connect 7 1 12 0;
 #X connect 8 0 9 4;
 #X connect 9 0 11 0;
 #X connect 10 0 9 0;
-#X connect 11 0 28 0;
-#X connect 12 0 34 0;
-#X connect 12 1 33 0;
+#X connect 11 0 40 0;
+#X connect 12 0 33 0;
+#X connect 12 1 32 0;
 #X connect 14 0 26 0;
 #X connect 15 0 21 0;
 #X connect 15 1 16 0;
@@ -2565,20 +2566,21 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X connect 27 0 9 1;
 #X connect 27 1 9 2;
 #X connect 27 2 9 3;
-#X connect 29 0 31 0;
-#X connect 30 0 8 1;
-#X connect 30 0 40 0;
-#X connect 31 0 30 0;
-#X connect 32 0 34 1;
-#X connect 33 0 32 0;
-#X connect 34 0 8 0;
+#X connect 28 0 30 0;
+#X connect 29 0 8 1;
+#X connect 29 0 39 0;
+#X connect 30 0 29 0;
+#X connect 31 0 33 1;
+#X connect 32 0 31 0;
+#X connect 33 0 8 0;
+#X connect 34 0 35 0;
 #X connect 35 0 36 0;
-#X connect 36 0 37 0;
-#X connect 36 1 38 0;
-#X connect 37 0 22 0;
-#X connect 38 0 37 1;
-#X connect 39 0 3 0;
-#X connect 40 0 39 1;
+#X connect 35 1 37 0;
+#X connect 36 0 22 0;
+#X connect 37 0 36 1;
+#X connect 38 0 3 0;
+#X connect 39 0 38 1;
+#X connect 40 0 41 0;
 #X restore -266 610 pd sphere 0 0 0 0;
 #X msg -195 134 1 1 1;
 #X obj -293 455 part_info 0 0 0 0 0 0 0 0;
@@ -2617,7 +2619,7 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X restore -41 238 pd alpha;
 #X obj 92 382 t f f b;
 #X msg 195 368 0 0 0;
-#X obj 256 217 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 256 217 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 233 325 sel 0 1;
 #X msg 233 346 1 0;
@@ -2857,7 +2859,7 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X obj 0 -55 route key_29;
 #X obj 0 -31 sel 1;
 #X obj 0 21 s \$0-line-ch;
-#X obj 0 0 tgl 15 0 empty empty CH 17 7 0 10 -262144 -1 -162280 0 1
+#X obj 0 0 tgl 15 0 empty empty CH 17 7 0 10 -262144 -1 -162280 1 1
 ;
 #X obj 0 -155 r gemkey;
 #X obj 0 -129 t a a;

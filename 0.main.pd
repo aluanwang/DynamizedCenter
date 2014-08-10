@@ -1,4 +1,4 @@
-#N canvas 913 40 539 729 10;
+#N canvas 736 33 539 729 10;
 #X declare -lib mrpeach;
 #X declare -path child;
 #X declare -path moving;
@@ -15,7 +15,7 @@
 #X declare -lib mrpeach;
 #X obj 10 420 k_udp;
 #X obj -5 -219 k_ui;
-#N canvas 340 423 793 332 meta 1;
+#N canvas 422 289 793 332 meta 0;
 #X obj 165 125 declare -path child;
 #X obj 166 148 declare -path moving;
 #X obj 166 173 loadbang;
@@ -74,7 +74,7 @@
 #X connect 23 0 25 0;
 #X connect 24 0 23 0;
 #X connect 25 0 26 0;
-#X restore -386 212 pd meta;
+#X restore -186 486 pd meta;
 #X obj -5 -144 k_mic;
 #X obj -29 278 k_leap;
 #X obj -198 282 planet;
@@ -83,10 +83,9 @@
 #X obj -145 359 s_motion-s;
 #X obj 10 358 k_cpu;
 #X obj -395 -205 s_motion-u;
-#X obj -269 359 s_motion-r;
+#X obj -269 358 s_motion-r;
 #X obj -394 359 s_motion-b;
 #X obj -111 10 k_effect;
-#X obj -394 10 k_win;
 #N canvas 299 287 631 403 (subpatch) 0;
 #X obj 34 35 r hid;
 #X obj 100 72 zexy/list2symbol;
@@ -139,7 +138,9 @@
 #X connect 2 0 1 0;
 #X connect 4 0 2 0;
 #X coords 0 -1 1 1 200 20 2 100 100;
-#X restore -329 209 pd;
+#X restore -393 485 pd;
 #X obj -394 277 vj_worm;
-#X obj -394 315 vj_sun;
 #X obj -394 237 vj_ocean;
+#X obj -393 39 k_win;
+#X obj -394 315 vj_sun 15;
+#X obj -278 243 vj_nebulas 16;

@@ -1,4 +1,4 @@
-#N canvas 498 250 702 484 10;
+#N canvas 498 250 792 557 10;
 #X obj 1 19 cnv 15 148 100 empty empty empty 20 12 0 14 -83269 -66577
 0;
 #X obj 279 201 s \$0-div;
@@ -8,10 +8,10 @@
 0 1;
 #N canvas 625 130 726 763 (subpatch) 0;
 #X obj 104 324 s \$0-pos;
-#X obj 3 0 hsl 100 15 0 2 0 0 empty empty Vel=0.24 8 8 0 10 -262144
--1 -1 1200 1;
+#X obj 3 0 hsl 100 15 0 2 0 0 empty empty Vel=0.46 8 8 0 10 -262144
+-1 -1 2298 1;
 #X obj 77 370 s \$0-pos;
-#X obj 115 0 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
+#X obj 115 0 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X floatatom 196 28 10 0 0 0 - - -;
 #X obj 77 275 t b b;
@@ -445,7 +445,7 @@
 #X msg 222 11 \$1 500;
 #X obj 222 31 line;
 #X obj 263 -154 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 67 147 loadbang;
 #X obj -11 15 loadbang;
 #X obj 222 -11 unpack f f f f;
@@ -1140,8 +1140,8 @@
 #X connect 38 1 32 0;
 #X restore -148 214 pd set-origon;
 #N canvas 378 401 557 348 (subpatch) 0;
-#X obj 3 0 hsl 100 15 0.05 6 0 0 empty empty num=1 8 8 0 10 -262144
--1 -1 1581 1;
+#X obj 3 0 hsl 100 15 0.05 6 0 0 empty empty num=1.78 8 8 0 10 -262144
+-1 -1 2881 1;
 #X floatatom 0 22 5 0 0 0 - - -;
 #X obj -77 161 s toudp;
 #X obj -77 135 packOSC;
@@ -1200,8 +1200,8 @@
 #X obj 222 -49 r sphere-signal;
 #X obj 170 -3 s \$0-gemkey;
 #N canvas 784 240 656 425 (subpatch) 0;
-#X obj 3 0 hsl 100 15 0.01 1 0 0 empty empty point=1 5 7 0 10 -262144
--1 -1 9900 1;
+#X obj 3 0 hsl 100 15 0.01 1 0 0 empty empty point=0.3 5 7 0 10 -262144
+-1 -1 2900 1;
 #X obj -31 1 tgl 14 0 empty show-tgl2 empty 0 -6 0 10 -1 -1 -262144
 0 1;
 #X floatatom 126 103 5 0 0 0 - - -;
@@ -1327,7 +1327,7 @@
 #X obj 332 -415 t b b b;
 #X obj 363 -274 spigot;
 #X obj 396 -294 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 359 -338 t f f;
 #X floatatom 363 -248 5 0 0 0 - - -;
 #X obj 445 -359 spigot;
@@ -1661,7 +1661,7 @@
 #X restore -114 -76 pd tempo;
 #N canvas 155 413 450 300 (subpatch) 0;
 #X obj 3 0 hsl 100 15 1 2 0 0 empty empty width 8 8 0 10 -262144 -1
--1 6690 1;
+-1 3390 1;
 #X obj -25 106 s toudp;
 #X obj -25 80 packOSC;
 #X msg -25 53 send /s-a4 \$1;
@@ -1683,7 +1683,7 @@
 #N canvas 0 22 450 300 (subpatch) 0;
 #X obj 0 -51 inlet;
 #X obj 3 0 hsl 100 15 1 2 0 0 empty empty hight 8 8 0 10 -262144 -1
--1 1490 1;
+-1 1590 1;
 #X obj 76 130 s toudp;
 #X obj 76 104 packOSC;
 #X msg 76 78 send /s-a3 \$1;

@@ -1,0 +1,18 @@
+#N canvas 577 276 706 510 10;
+#X declare -lib mrpeach;
+#X text 251 27 bang at first to search avaible servers;
+#X obj 243 52 syphone_load;
+#X obj 49 72 gemhead 50;
+#X obj 159 64 syphonclient;
+#X obj 49 97 pix_texture;
+#X obj 159 14 gemhead 45;
+#X obj 49 166 rectangle 7.2 4;
+#X obj 456 127 k_cpu;
+#X obj 41 307 k_win;
+#X obj 351 227 k_syphoneffect;
+#X connect 1 0 3 0;
+#X connect 2 0 4 0;
+#X connect 3 1 4 1;
+#X connect 3 2 1 0;
+#X connect 4 0 6 0;
+#X connect 5 0 3 0;

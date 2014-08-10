@@ -1,0 +1,7 @@
+#N canvas 200 389 734 313 10;
+#X declare -lib mrpeach;
+#X obj 128 42 k_win;
+#X obj 27 169 gemhead 100000;
+#X obj 24 246 syphonserver toeffect;
+#X obj 424 22 k_effect;
+#X connect 1 0 2 0;
