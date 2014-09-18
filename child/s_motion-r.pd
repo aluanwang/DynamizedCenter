@@ -266,11 +266,11 @@
 #X coords 0 -1 1 1 20 20 2 100 100;
 #X restore 195 196 pd loadbang;
 #X obj 108 183 hsl 80 15 0.05 1 0 0 empty empty face 5 7 0 10 -262144
--1 -1 4632 1;
+-1 -1 7900 1;
 #X obj 108 201 hsl 80 15 0.1 4 0 0 empty empty connect 5 6 0 10 -262144
--1 -1 3900 1;
+-1 -1 7548 1;
 #X obj 108 165 hsl 80 15 0 0.8 0 0 empty empty length 5 6 0 10 -262144
--1 -1 3000 1;
+-1 -1 7900 1;
 #X obj 389 298 metro 2000;
 #X obj 451 38 table \$0-theta_start 200;
 #X obj 451 58 table \$0-theta_end 200;
@@ -282,8 +282,8 @@
 #X obj 453 160 table \$0-kk 1000;
 #N canvas 336 175 544 477 (subpatch) 0;
 #X obj 1 88 s \$0-size;
-#X obj 3 0 hsl 80 15 1 40 0 0 empty empty N=25 8 8 0 10 -262144 -1
--1 5006 1;
+#X obj 3 0 hsl 80 15 1 40 0 0 empty empty N=40 8 8 0 10 -262144 -1
+-1 7900 1;
 #X obj 0 33 int;
 #X obj -36 115 outlet;
 #X msg 69 61 label N=\$1;
@@ -354,7 +354,7 @@
 #X coords 0 1 100 -1 85 15 1 0 0;
 #X restore 105 125 graph;
 #X obj 108 145 hsl 80 15 0.01 8 0 0 empty empty radius 5 6 0 10 -262144
--1 -1 2279 1;
+-1 -1 7900 1;
 #X msg 195 94 0;
 #X floatatom 63 262 5 0 0 0 - - -;
 #X floatatom 63 241 5 0 0 0 - - -;
@@ -399,7 +399,7 @@
 #X obj 444 47 r \$0-size;
 #X obj 123 -42 r \$0-size;
 #X floatatom -74 450 5 0 0 0 - - -;
-#N canvas 679 220 551 556 circle 0;
+#N canvas 856 229 551 556 circle 0;
 #X obj -87 367 alpha;
 #X obj -174 248 loadbang;
 #X obj 24 342 inlet;
@@ -428,11 +428,12 @@
 #X obj 4 280 + 0.7;
 #X obj 4 256 randomF 0.3;
 #X msg -14 121 0.3 0.6 0.8;
+#X obj 30 408 * 2;
 #X connect 0 0 21 0;
 #X connect 1 0 5 0;
 #X connect 1 0 12 0;
 #X connect 2 0 3 0;
-#X connect 3 0 21 1;
+#X connect 3 0 27 0;
 #X connect 4 0 6 0;
 #X connect 5 0 0 0;
 #X connect 6 0 7 0;
@@ -461,6 +462,7 @@
 #X connect 24 0 16 0;
 #X connect 25 0 24 0;
 #X connect 26 0 17 0;
+#X connect 27 0 21 1;
 #X restore -99 507 pd circle;
 #N canvas 712 358 658 460 cone 0;
 #X obj 114 53 inlet;
@@ -736,7 +738,7 @@
 #X connect 24 0 16 0;
 #X connect 24 1 17 0;
 #X restore 121 422 pd color&shape;
-#N canvas 762 25 617 659 pos_1=== 1;
+#N canvas 762 25 617 659 pos_1=== 0;
 #X obj 107 -10 inlet;
 #X obj 78 290 expr sin($f1)*sin($f2);
 #X obj 48 314 expr sin($f1)*cos($f2);

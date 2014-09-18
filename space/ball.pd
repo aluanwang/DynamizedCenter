@@ -1,4 +1,4 @@
-#N canvas 340 196 884 727 10;
+#N canvas 600 69 884 553 10;
 #X obj 101 114 cnv 15 78 55 empty empty empty 20 12 0 14 -189697 -66577
 0;
 #X obj 104 192 gemhead;
@@ -40,7 +40,7 @@
 #X obj 102 249 t a b;
 #X obj 148 249 f;
 #X obj 102 288 rotateXYZ 0 0 0;
-#X obj 214 250 fmod 360;
+#X obj 208 250 fmod 360;
 #X floatatom 73 568 5 0 0 0 - - -;
 #X msg 73 589 K \$1;
 #X obj 247 462 + 10;
@@ -61,7 +61,7 @@
 #X obj -87 580 GLdefine GL_FILL;
 #X obj -180 465 model;
 #X obj 126 134 hsl 50 15 0.3 25 0 0 empty empty size 3 8 0 10 -262144
--1 -1 365 1;
+-1 -1 4900 1;
 #X obj -39 463 line;
 #X obj -180 432 scale 15;
 #X obj -24 377 loadbang;
@@ -71,10 +71,10 @@
 #X msg -24 399 open ball.obj;
 #X obj -87 305 GLdefine GL_LINE;
 #X obj -180 395 GEMglLineWidth 2;
-#X obj 174 250 + 1;
+#X obj 179 249 + 1;
 #X msg 81 695 color 0.2 0.25 0.6 \$1;
 #X obj 126 151 hsl 50 15 0.1 10 0 0 empty empty rotate 3 8 0 10 -262144
--1 -1 4118 1;
+-1 -1 4900 1;
 #X floatatom 305 224 5 0 0 0 - - -;
 #X obj 305 248 k_range 0 127 0 0.1;
 #X obj 305 199 ctlin 7;
@@ -106,7 +106,10 @@
 #X msg 251 652 0.2 10000;
 #X obj 275 116 k_range 0 1 0.3 25;
 #X obj 410 554 k_range 0.3 25 0 1;
-#X connect 1 0 31 0;
+#X obj 180 211 translateXYZ;
+#X obj 190 145 r targetpoint;
+#X obj 190 168 unpack f f f;
+#X connect 1 0 98 0;
 #X connect 2 0 21 0;
 #X connect 3 0 7 0;
 #X connect 4 0 3 0;
@@ -189,8 +192,8 @@
 #X connect 63 0 56 0;
 #X connect 64 0 34 0;
 #X connect 65 0 2 0;
-#X connect 66 0 64 1;
 #X connect 66 0 90 0;
+#X connect 66 0 64 1;
 #X connect 67 0 68 0;
 #X connect 68 0 30 0;
 #X connect 69 0 67 0;
@@ -229,4 +232,9 @@
 #X connect 95 0 51 0;
 #X connect 96 0 54 0;
 #X connect 97 0 92 0;
+#X connect 98 0 31 0;
+#X connect 99 0 100 0;
+#X connect 100 0 98 1;
+#X connect 100 1 98 2;
+#X connect 100 2 98 3;
 #X coords 0 -1 1 1 80 70 1 100 100;

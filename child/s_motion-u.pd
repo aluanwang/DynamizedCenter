@@ -1,4 +1,4 @@
-#N canvas 764 37 770 686 10;
+#N canvas 238 175 770 686 10;
 #X text 289 352 x = x0 + rsin(theta)*cos(phi);
 #X text 289 362 y = y0 + rsin(theta)*sin(phi);
 #X text 289 372 z = z0 + rcos(theta);
@@ -120,7 +120,7 @@
 #X connect 46 0 47 0;
 #X connect 47 0 48 0;
 #X restore 101 599 pd point-start;
-#N canvas 553 40 451 666 point-end 1;
+#N canvas 553 40 451 666 point-end 0;
 #X obj -137 424 translateXYZ;
 #X obj -114 298 t f f f;
 #X obj 44 296 t f f;
@@ -284,7 +284,7 @@
 #X obj 55 88 s \$0-track;
 #X obj 1 -50 loadbang;
 #X obj 0 0 hradio 15 1 0 8 empty empty empty 0 -8 0 10 -258113 -262144
--1 0;
+-1 7;
 #X msg 1 -25 0;
 #X obj 0 27 + 1;
 #X obj 9 194 s toudp;
@@ -339,7 +339,7 @@
 #X coords 0 1 100 -1 120 15 1 0 0;
 #X restore 156 258 graph;
 #N canvas 692 122 398 349 (subpatch) 0;
-#X obj 0 0 tgl 30 0 empty empty H 11 15 0 15 -258113 -1 -1 1 1;
+#X obj 0 0 tgl 30 0 empty empty H 11 15 0 15 -258113 -1 -1 0 1;
 #X obj 0 47 s \$0-gemhead-tgl;
 #X obj 116 46 sel 1;
 #X obj 116 122 s data-info;
@@ -369,7 +369,7 @@
 #X coords 0 1 100 -1 30 30 1 0 0;
 #X restore 140 130 graph;
 #N canvas 638 222 450 300 (subpatch) 0;
-#X obj 0 0 tgl 30 0 empty empty S 11 15 0 15 -258113 -1 -1 1 1;
+#X obj 0 0 tgl 30 0 empty empty S 11 15 0 15 -258113 -1 -1 0 1;
 #X obj 0 47 s \$0-start;
 #X obj 0 -40 r \$0-gemhead-tgl;
 #X connect 0 0 1 0;
@@ -560,21 +560,21 @@
 #X coords 0 1 100 -1 65 15 1 0 0;
 #X restore 106 156 graph;
 #X obj 109 174 hsl 60 15 0 100 0 0 empty empty 0 2 8 0 10 -262144 -1
--1 3717 1;
+-1 0 1;
 #X obj 109 191 hsl 60 15 0 100 0 0 empty empty 1 2 8 0 10 -262144 -1
--1 1711 1;
+-1 769 1;
 #X obj 109 208 hsl 60 15 0 100 0 0 empty empty 2 2 8 0 10 -262144 -1
--1 3717 1;
+-1 1538 1;
 #X obj 109 225 hsl 60 15 0 100 0 0 empty empty 3 2 8 0 10 -262144 -1
--1 4720 1;
+-1 4756 1;
 #X obj 109 242 hsl 60 15 0 100 0 0 empty empty 4 2 8 0 10 -262144 -1
--1 1534 1;
+-1 3200 1;
 #X obj 109 259 hsl 60 15 0 100 0 0 empty empty 5 2 8 0 10 -262144 -1
--1 472 1;
+-1 4148 1;
 #X obj 109 276 hsl 60 15 0 100 0 0 empty empty 6 2 8 0 10 -262144 -1
--1 1121 1;
+-1 5203 1;
 #X obj 109 293 hsl 60 15 0 100 0 0 empty empty 7 2 8 0 10 -262144 -1
--1 5369 1;
+-1 5900 1;
 #X obj 3 62 b;
 #X obj 3 41 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -1308,7 +1308,7 @@
 #X connect 54 0 55 0;
 #X connect 56 0 34 1;
 #X restore 140 577 pd motion;
-#N canvas 546 63 728 742 distance 0;
+#N canvas 546 63 728 742 distance 1;
 #N canvas 716 119 450 300 (subpatch) 0;
 #X obj 3 0 hsl 60 15 0.05 0.9 0 0 empty empty distance 2 8 0 10 -262144
 -1 -1 0 1;
@@ -1329,21 +1329,21 @@
 #X coords 0 1 100 -1 65 15 1 0 0;
 #X restore 126 151 graph;
 #X obj 129 170 hsl 60 15 0.1 0.9 0 0 empty empty 0 2 8 0 10 -262144
--1 -1 0 1;
+-1 -1 1229 1;
 #X obj 128 189 hsl 60 15 0.1 0.9 0 0 empty empty 1 2 8 0 10 -262144
--1 -1 0 1;
+-1 -1 286 1;
 #X obj 128 206 hsl 60 15 0.1 0.9 0 0 empty empty 2 2 8 0 10 -262144
--1 -1 0 1;
+-1 -1 2342 1;
 #X obj 128 224 hsl 60 15 0.1 0.9 0 0 empty empty 3 2 8 0 10 -262144
--1 -1 0 1;
+-1 -1 948 1;
 #X obj 128 241 hsl 60 15 0.1 0.9 0 0 empty empty 4 2 8 0 10 -262144
--1 -1 0 1;
+-1 -1 72 1;
 #X obj 128 258 hsl 60 15 0.1 0.9 0 0 empty empty 5 2 8 0 10 -262144
--1 -1 0 1;
+-1 -1 2997 1;
 #X obj 128 275 hsl 60 15 0.1 0.9 0 0 empty empty 6 2 8 0 10 -262144
--1 -1 0 1;
+-1 -1 572 1;
 #X obj 128 292 hsl 60 15 0.1 0.9 0 0 empty empty 7 2 8 0 10 -262144
--1 -1 0 1;
+-1 -1 125 1;
 #N canvas 0 22 152 301 random 0;
 #X obj 16 142 randomF 0.85;
 #X obj 16 171 + 0.05;
@@ -1687,6 +1687,7 @@
 -1;
 #X floatatom 94 409 5 0 0 0 - - -;
 #X obj -66 79 t b b b b b b b b;
+#X obj -66 10 r \$0-gemhead-tgl;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 0 0 3 0;
@@ -1771,7 +1772,6 @@
 #X connect 51 0 42 0;
 #X connect 51 1 52 0;
 #X connect 52 0 42 0;
-#X connect 53 0 54 0;
 #X connect 54 0 65 0;
 #X connect 56 0 58 0;
 #X connect 56 1 57 0;
@@ -1780,8 +1780,14 @@
 #X connect 60 0 56 0;
 #X connect 61 0 62 0;
 #X connect 62 0 63 0;
-#X connect 63 0 53 0;
-#X connect 65 0 67 0;
+#X connect 65 0 18 0;
+#X connect 65 0 19 0;
+#X connect 65 0 22 0;
+#X connect 65 0 23 0;
+#X connect 65 0 24 0;
+#X connect 65 0 25 0;
+#X connect 65 0 26 0;
+#X connect 65 0 27 0;
 #X connect 67 0 16 0;
 #X connect 67 1 15 0;
 #X connect 67 2 14 0;
@@ -1790,6 +1796,7 @@
 #X connect 67 5 11 0;
 #X connect 67 6 10 0;
 #X connect 67 7 9 0;
+#X connect 68 0 54 0;
 #X coords 0 -1 1 1 100 210 1 100 100;
 #X restore 305 100 pd distance;
 #N canvas 799 387 450 300 (subpatch) 0;
@@ -2145,7 +2152,7 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X obj 209 359 r randomback;
 #N canvas 756 222 450 300 (subpatch) 0;
 #X obj 0 21 s \$0-partline-tgl;
-#X obj 0 0 tgl 15 0 empty empty line 17 7 0 10 -258113 -1 -162280 1
+#X obj 0 0 tgl 15 0 empty empty line 17 7 0 10 -258113 -1 -162280 0
 1;
 #X obj 123 70 s toudp;
 #X obj 123 44 packOSC;
@@ -2167,7 +2174,7 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X coords 0 1 100 -1 15 15 1 0 0;
 #X restore 108 237 graph;
 #N canvas 587 485 450 300 (subpatch) 0;
-#X obj 0 0 tgl 15 0 empty empty part 17 7 0 10 -258113 -1 -162280 1
+#X obj 0 0 tgl 15 0 empty empty part 17 7 0 10 -258113 -1 -162280 0
 1;
 #X obj 0 20 s \$0-part-tgl;
 #X obj 0 -114 loadbang;
@@ -2262,7 +2269,7 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #N canvas 114 285 666 497 (subpatch) 0;
 #X obj 0 -48 loadbang;
 #X obj 3 0 hsl 128 15 0.1 0.5 0 0 empty empty part-speed_[g] 8 8 0
-10 -262144 -1 -1 3900 1;
+10 -262144 -1 -1 0 1;
 #X floatatom 0 26 5 0 0 0 - - -;
 #X msg 0 -27 0.1;
 #X obj 89 185 s \$0-part-speed;
@@ -2619,7 +2626,7 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X restore -41 238 pd alpha;
 #X obj 92 382 t f f b;
 #X msg 195 368 0 0 0;
-#X obj 256 217 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 256 217 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 233 325 sel 0 1;
 #X msg 233 346 1 0;
@@ -2852,14 +2859,14 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X connect 37 0 0 0;
 #X connect 38 0 29 0;
 #X restore 291 557 pd particle========;
-#X obj 143 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 143 35 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 110 7 r hid;
 #N canvas 967 222 494 345 (subpatch) 0;
 #X obj 0 -55 route key_29;
 #X obj 0 -31 sel 1;
 #X obj 0 21 s \$0-line-ch;
-#X obj 0 0 tgl 15 0 empty empty CH 17 7 0 10 -262144 -1 -162280 1 1
+#X obj 0 0 tgl 15 0 empty empty CH 17 7 0 10 -262144 -1 -162280 0 1
 ;
 #X obj 0 -155 r gemkey;
 #X obj 0 -129 t a a;
@@ -2893,7 +2900,7 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X obj 164 546 > 0;
 #X obj 101 528 spigot;
 #N canvas 193 499 450 300 (subpatch) 0;
-#X obj 0 0 tgl 15 0 empty empty hole 17 7 0 10 -258113 -1 -162280 1
+#X obj 0 0 tgl 15 0 empty empty hole 17 7 0 10 -258113 -1 -162280 0
 1;
 #X obj 0 -108 loadbang;
 #X msg 0 -22 0;
@@ -3055,7 +3062,7 @@ const 0 \; phi_start const 0 \; phi_end const 0 \; phi_motion const
 #X connect 47 0 34 0;
 #X connect 48 0 34 0;
 #X restore 23 140 pd touch==========;
-#X obj 98 318 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 98 318 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 513 347 facing;
 #X obj 513 369 scale 1;

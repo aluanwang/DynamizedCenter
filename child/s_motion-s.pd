@@ -1,17 +1,17 @@
 #N canvas 498 250 792 557 10;
-#X obj 1 19 cnv 15 148 100 empty empty empty 20 12 0 14 -83269 -66577
+#X obj 1 19 cnv 15 118 100 empty empty empty 20 12 0 14 -83269 -66577
 0;
 #X obj 279 201 s \$0-div;
 #X obj -148 195 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj -44 154 tgl 15 0 empty empty not 16 7 0 10 -262144 -1 -162280
 0 1;
-#N canvas 625 130 726 763 (subpatch) 0;
+#N canvas 625 22 726 553 (subpatch) 0;
 #X obj 104 324 s \$0-pos;
-#X obj 3 0 hsl 100 15 0 2 0 0 empty empty Vel=0.46 8 8 0 10 -262144
--1 -1 2298 1;
+#X obj 3 0 hsl 75 15 0 2 0 0 empty empty Vel=0.46 8 8 0 10 -262144
+-1 -1 0 1;
 #X obj 77 370 s \$0-pos;
-#X obj 115 0 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+#X obj 85 0 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X floatatom 196 28 10 0 0 0 - - -;
 #X obj 77 275 t b b;
@@ -346,8 +346,8 @@
 #X connect 35 1 36 0;
 #X connect 36 0 14 0;
 #X connect 37 0 14 0;
-#X coords 0 1 100 -1 130 15 2 0 0;
-#X restore 10 101 graph;
+#X coords 0 1 100 -1 100 15 2 0 0;
+#X restore 4 101 graph;
 #X floatatom 279 177 3 0 0 0 - - -;
 #X obj 279 155 expr (($f1+1)*3)+5;
 #X obj 69 -147 r sphere-go;
@@ -537,7 +537,7 @@
 #X connect 46 0 18 0;
 #X restore -97 318 pd fill;
 #X obj 168 116 k_tgl;
-#X obj 0 0 tgl 20 0 empty empty H 6 10 0 14 -258113 -1 -1 1 1;
+#X obj 0 0 tgl 20 0 empty empty H 6 10 0 14 -258113 -1 -1 0 1;
 #X obj 17 100 line;
 #X obj -148 168 s toudp;
 #X obj -148 142 packOSC;
@@ -852,7 +852,7 @@
 #X connect 58 1 1 0;
 #X connect 59 0 8 0;
 #X coords 0 1 100 -1 20 20 1 0 0;
-#X restore 122 22 graph;
+#X restore 89 23 graph;
 #N canvas 613 175 525 516 set-origon 0;
 #X obj -84 -223 r \$0-div;
 #X obj -150 -194 repeat 10;
@@ -1140,8 +1140,8 @@
 #X connect 38 1 32 0;
 #X restore -148 214 pd set-origon;
 #N canvas 378 401 557 348 (subpatch) 0;
-#X obj 3 0 hsl 100 15 0.05 6 0 0 empty empty num=1.78 8 8 0 10 -262144
--1 -1 2881 1;
+#X obj 3 0 hsl 75 15 0.05 6 0 0 empty empty num=1.78 8 8 0 10 -262144
+-1 -1 0 1;
 #X floatatom 0 22 5 0 0 0 - - -;
 #X obj -77 161 s toudp;
 #X obj -77 135 packOSC;
@@ -1176,8 +1176,8 @@
 #X connect 14 1 6 0;
 #X connect 14 2 15 0;
 #X connect 14 2 16 0;
-#X coords 0 1 100 -1 105 15 1 0 0;
-#X restore 10 24 graph;
+#X coords 0 1 100 -1 80 15 1 0 0;
+#X restore 4 24 graph;
 #X obj -4 154 tgl 15 0 empty show-tgl sel 16 7 0 10 -258699 -99865
 -262144 0 1;
 #X obj 117 -125 r sphere-signal;
@@ -1194,14 +1194,14 @@
 #X obj 279 101 loadbang;
 #X obj 69 -124 spigot;
 #X obj 170 -28 spigot;
-#X obj 203 -48 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 203 -48 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 170 -76 r hid;
 #X obj 222 -49 r sphere-signal;
 #X obj 170 -3 s \$0-gemkey;
 #N canvas 784 240 656 425 (subpatch) 0;
-#X obj 3 0 hsl 100 15 0.01 1 0 0 empty empty point=0.3 5 7 0 10 -262144
--1 -1 2900 1;
+#X obj 3 0 hsl 75 15 0.01 1 0 0 empty empty point=0.3 5 7 0 10 -262144
+-1 -1 0 1;
 #X obj -31 1 tgl 14 0 empty show-tgl2 empty 0 -6 0 10 -1 -1 -262144
 0 1;
 #X floatatom 126 103 5 0 0 0 - - -;
@@ -1252,8 +1252,8 @@
 #X connect 23 1 16 0;
 #X connect 23 2 22 0;
 #X connect 23 2 24 0;
-#X coords 0 1 100 -1 105 15 1 0 0;
-#X restore 10 81 graph;
+#X coords 0 1 100 -1 80 15 1 0 0;
+#X restore 4 81 graph;
 #X obj -148 174 metro 50;
 #X obj -115 -4 r sphere-signal;
 #X obj -148 126 spigot;
@@ -1660,8 +1660,8 @@
 #X connect 142 1 4 1;
 #X restore -114 -76 pd tempo;
 #N canvas 155 413 450 300 (subpatch) 0;
-#X obj 3 0 hsl 100 15 1 2 0 0 empty empty width 8 8 0 10 -262144 -1
--1 3390 1;
+#X obj 3 0 hsl 75 15 1 2 0 0 empty empty width 8 8 0 10 -262144 -1
+-1 0 1;
 #X obj -25 106 s toudp;
 #X obj -25 80 packOSC;
 #X msg -25 53 send /s-a4 \$1;
@@ -1678,12 +1678,12 @@
 #X connect 5 0 0 0;
 #X connect 6 0 7 0;
 #X connect 6 0 8 0;
-#X coords 0 1 100 -1 105 15 1 0 0;
-#X restore 10 43 graph;
+#X coords 0 1 100 -1 80 15 1 0 0;
+#X restore 4 43 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X obj 0 -51 inlet;
-#X obj 3 0 hsl 100 15 1 2 0 0 empty empty hight 8 8 0 10 -262144 -1
--1 1590 1;
+#X obj 3 0 hsl 75 15 1 2 0 0 empty empty hight 8 8 0 10 -262144 -1
+-1 0 1;
 #X obj 76 130 s toudp;
 #X obj 76 104 packOSC;
 #X msg 76 78 send /s-a3 \$1;
@@ -1699,8 +1699,8 @@
 #X connect 3 0 2 0;
 #X connect 4 0 3 0;
 #X connect 6 0 8 0;
-#X coords 0 1 100 -1 105 15 1 0 0;
-#X restore 10 61 graph;
+#X coords 0 1 100 -1 80 15 1 0 0;
+#X restore 4 61 graph;
 #X obj -148 153 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj -115 99 pipe 100;
@@ -1847,4 +1847,4 @@
 #X connect 44 5 8 0;
 #X connect 44 6 4 1;
 #X connect 46 0 6 0;
-#X coords 0 -1 1 1 150 120 1 0 0;
+#X coords 0 -1 1 1 120 120 1 0 0;
