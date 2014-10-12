@@ -1,4 +1,4 @@
-#N canvas 791 166 640 583 10;
+#N canvas 582 177 640 583 10;
 #X declare -lib mrpeach;
 #X declare -path child;
 #X declare -path moving;
