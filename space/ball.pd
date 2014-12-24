@@ -36,7 +36,7 @@
 #X obj 103 117 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 126 116 hsl 50 15 0 0.05 0 0 empty empty jump 3 8 0 10 -262144
--1 -1 4900 1;
+-1 -1 0 1;
 #X obj 102 249 t a b;
 #X obj 148 249 f;
 #X obj 102 288 rotateXYZ 0 0 0;
@@ -61,7 +61,7 @@
 #X obj -87 580 GLdefine GL_FILL;
 #X obj -180 465 model;
 #X obj 126 134 hsl 50 15 0.3 25 0 0 empty empty size 3 8 0 10 -262144
--1 -1 4900 1;
+-1 -1 60 1;
 #X obj -39 463 line;
 #X obj -180 432 scale 15;
 #X obj -24 377 loadbang;
@@ -74,7 +74,7 @@
 #X obj 179 249 + 1;
 #X msg 81 695 color 0.2 0.25 0.6 \$1;
 #X obj 126 151 hsl 50 15 0.1 10 0 0 empty empty rotate 3 8 0 10 -262144
--1 -1 4900 1;
+-1 -1 445 1;
 #X floatatom 305 224 5 0 0 0 - - -;
 #X obj 305 248 k_range 0 127 0 0.1;
 #X obj 305 199 ctlin 7;
@@ -103,13 +103,13 @@
 #X msg 409 578 send /vj/14 \$1;
 #X msg 538 612 send /vj/15 \$1;
 #X msg 235 631 0 10000;
-#X msg 251 652 0.2 10000;
 #X obj 275 116 k_range 0 1 0.3 25;
 #X obj 410 554 k_range 0.3 25 0 1;
-#X obj 180 211 translateXYZ;
 #X obj 190 145 r targetpoint;
 #X obj 190 168 unpack f f f;
-#X connect 1 0 98 0;
+#X obj 180 211 translateXYZ 0 0 0;
+#X msg 251 652 0.2 10000;
+#X connect 1 0 99 0;
 #X connect 2 0 21 0;
 #X connect 3 0 7 0;
 #X connect 4 0 3 0;
@@ -174,14 +174,14 @@
 #X connect 47 0 39 0;
 #X connect 48 0 40 0;
 #X connect 49 0 94 0;
-#X connect 49 1 95 0;
+#X connect 49 1 100 0;
 #X connect 50 0 1 0;
 #X connect 51 0 50 0;
 #X connect 51 0 65 0;
 #X connect 52 0 23 2;
 #X connect 53 0 23 0;
 #X connect 54 0 75 0;
-#X connect 54 0 97 0;
+#X connect 54 0 96 0;
 #X connect 55 0 56 1;
 #X connect 56 0 53 0;
 #X connect 57 0 61 0;
@@ -206,7 +206,7 @@
 #X connect 74 1 73 0;
 #X connect 74 1 79 0;
 #X connect 74 2 80 0;
-#X connect 74 2 96 0;
+#X connect 74 2 95 0;
 #X connect 74 3 72 0;
 #X connect 74 3 81 0;
 #X connect 75 0 55 0;
@@ -229,12 +229,9 @@
 #X connect 92 0 88 0;
 #X connect 93 0 88 0;
 #X connect 94 0 51 0;
-#X connect 95 0 51 0;
-#X connect 96 0 54 0;
-#X connect 97 0 92 0;
-#X connect 98 0 31 0;
-#X connect 99 0 100 0;
-#X connect 100 0 98 1;
-#X connect 100 1 98 2;
-#X connect 100 2 98 3;
+#X connect 95 0 54 0;
+#X connect 96 0 92 0;
+#X connect 97 0 98 0;
+#X connect 99 0 31 0;
+#X connect 100 0 51 0;
 #X coords 0 -1 1 1 80 70 1 100 100;
