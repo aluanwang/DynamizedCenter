@@ -4,6 +4,7 @@ uniform float     alpha;
 
 float d = sin(iGlobalTime * 5.0)*0.001 ; // kernel offset
 
+
 float lookup(vec2 p, float dx, float dy)
 {
     //vec2 uv = (p.xy + vec2(dx * d, dy * d)) /vec2(800.0,500.0);
@@ -39,7 +40,7 @@ void main(void)
     float g2 = g * (sin(iGlobalTime) / 2.0 + 0.5);
     
     vec4 col = texture2D(iChannel0, vec2(gl_TexCoord[0].xy));
-    col += vec4(0.0, g, g2, 1.0);
+    col += vec4(g, g, g, 1.0);
     
     gl_FragColor = vec4(col.rgb,alpha);
 }

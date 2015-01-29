@@ -6,7 +6,6 @@ uniform float     alpha;
 vec3 deform( in vec2 p )
 {
     vec2 uv;
-
     vec2 q = vec2( sin(2.0*iGlobalTime+p.x),cos(2.0*iGlobalTime+p.y) );
 
     float a = atan(q.y,q.x);
@@ -20,11 +19,11 @@ vec3 deform( in vec2 p )
 
 void main(void)
 {
-    vec2 p = (vec2(gl_TexCoord[0].xy)*2.0)+vec2(-0.5,-0.5);
+    vec2 p = (vec2(gl_TexCoord[0].xy)*2.0)-vec2(0.5 ,0.5);
     vec2 s = p;
 
     vec3 total = vec3(0.0);
-    vec2 d = (vec2(0.0,0.0)-p)/30.0;
+    vec2 d = (vec2(cos(iGlobalTime*6.28),sin(iGlobalTime*6.28))-p)/50.0;
     float w = 1.0;
     for( int i=0; i<30; i++ )
     {
@@ -34,7 +33,7 @@ void main(void)
         w *= .96;
         s += d;
     }
-    total /= 30.0;
+    total /= 50.0;
     float r = 5.0;
 
 	gl_FragColor = vec4( total*r,alpha);

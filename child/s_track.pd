@@ -1,6 +1,6 @@
 #N canvas 654 296 403 413 10;
 #X obj -82 -65 inlet;
-#X obj -58 -6 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj -58 -6 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj -58 55 s \$0-t-vol;
 #X floatatom -147 32 5 0 0 0 - - -;
@@ -10,7 +10,7 @@
 #X obj -147 6 change;
 #X floatatom -56 172 5 0 0 0 - - -;
 #X obj -82 -32 route /1 /2 /3 /4 /5;
-#N canvas 683 62 757 706 sound 0;
+#N canvas 683 62 757 706 sound 1;
 #X obj 73 322 perk-bassdrum /key;
 #X obj 327 125 init \$1;
 #X obj 73 207 inlet;
@@ -102,18 +102,19 @@
 #X obj -56 193 expr $f1/0.7;
 #X obj -126 273 outlet~;
 #X obj 69 274 outlet~;
-#X obj -56 225 sig~;
 #X obj -126 247 *~;
 #X obj 69 249 *~;
 #X obj 69 207 *~;
 #X obj -126 205 *~;
 #X msg 64 120 \$1 1000;
 #X obj 64 145 line~;
+#X msg -56 219 \$1 100;
+#X obj -56 243 line~;
 #X connect 0 0 9 0;
 #X connect 1 0 5 0;
 #X connect 3 0 10 0;
 #X connect 4 0 2 0;
-#X connect 4 0 19 0;
+#X connect 4 0 18 0;
 #X connect 5 0 4 0;
 #X connect 6 0 8 0;
 #X connect 7 0 3 0;
@@ -122,15 +123,16 @@
 #X connect 9 1 1 0;
 #X connect 9 2 10 1;
 #X connect 9 3 10 2;
-#X connect 10 0 18 0;
-#X connect 10 1 17 0;
-#X connect 11 0 14 0;
-#X connect 14 0 15 1;
-#X connect 14 0 16 1;
-#X connect 15 0 12 0;
-#X connect 16 0 13 0;
-#X connect 17 0 16 0;
-#X connect 18 0 15 0;
-#X connect 19 0 20 0;
-#X connect 20 0 18 1;
-#X connect 20 0 17 1;
+#X connect 10 0 17 0;
+#X connect 10 1 16 0;
+#X connect 11 0 20 0;
+#X connect 14 0 12 0;
+#X connect 15 0 13 0;
+#X connect 16 0 15 0;
+#X connect 17 0 14 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 1;
+#X connect 19 0 16 1;
+#X connect 20 0 21 0;
+#X connect 21 0 14 1;
+#X connect 21 0 15 1;

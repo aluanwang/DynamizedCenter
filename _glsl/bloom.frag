@@ -1,5 +1,7 @@
 uniform sampler2D bgl_RenderedTexture;
-uniform float glowSize;
+
+uniform float alpha;
+#define glowSize 0.4
 
 void main()
 {
@@ -15,19 +17,26 @@ void main()
             sum += texture2D(bgl_RenderedTexture, texcoord + vec2(j, i)*0.004) * glowSize;
         }
    }
+   
+   vec4 aa,bb,cc;
+   aa=sum*sum*0.012 + texture2D(bgl_RenderedTexture, texcoord);
+   bb=sum*sum*0.009 + texture2D(bgl_RenderedTexture, texcoord);
+   cc=sum*sum*0.0075 + texture2D(bgl_RenderedTexture, texcoord);
+   
+   
        if (texture2D(bgl_RenderedTexture, texcoord).r < 0.3)
     {
-       gl_FragColor = sum*sum*0.012 + texture2D(bgl_RenderedTexture, texcoord);
+       gl_FragColor =vec4(aa.rgb,alpha) ;
     }
     else
     {
         if (texture2D(bgl_RenderedTexture, texcoord).r < 0.5)
         {
-            gl_FragColor = sum*sum*0.009 + texture2D(bgl_RenderedTexture, texcoord);
+            gl_FragColor = vec4(bb.rgb,alpha) ;
         }
         else
         {
-            gl_FragColor = sum*sum*0.0075 + texture2D(bgl_RenderedTexture, texcoord);
+            gl_FragColor = vec4(cc.rgb,alpha) ;
         }
     }
 }

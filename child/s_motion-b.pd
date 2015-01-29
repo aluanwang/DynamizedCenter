@@ -1,4 +1,4 @@
-#N canvas 663 333 825 458 10;
+#N canvas 347 309 825 458 10;
 #X obj 101 119 cnv 15 118 100 empty empty empty 20 12 0 14 -160200
 -66577 0;
 #N canvas 759 196 564 589 end 0;
@@ -104,9 +104,9 @@
 ;
 #X obj 204 36 loadbang;
 #X obj 110 181 hsl 60 15 0.05 0.4 0 0 empty empty face 5 7 0 10 -262144
--1 -1 5306 1;
+-1 -1 2786 1;
 #X obj 110 163 hsl 60 15 0 5 0 0 empty empty length 5 6 0 10 -262144
--1 -1 5052 1;
+-1 -1 1512 1;
 #X obj 558 7 table \$0-theta_start 200;
 #X obj 558 27 table \$0-theta_end 200;
 #X obj 558 46 table \$0-phi_start 200;
@@ -115,8 +115,8 @@
 #X obj 558 107 table \$0-theta_motion 200;
 #N canvas 349 292 517 470 (subpatch) 0;
 #X obj 0 39 s \$0-size;
-#X obj 3 0 hsl 80 15 2 50 0 0 empty empty N=39 8 8 0 10 -262144 -1
--1 6254 1;
+#X obj 3 0 hsl 80 15 2 50 0 0 empty empty N=8 8 8 0 10 -262144 -1 -1
+1100 1;
 #X obj 0 19 int;
 #X obj -43 74 outlet;
 #X msg 96 54 label N=\$1;
@@ -181,7 +181,7 @@
 #X coords 0 1 100 -1 85 15 1 0 0;
 #X restore 106 122 graph;
 #X obj 110 143 hsl 80 15 0.001 8 0 0 empty empty radius 5 6 0 10 -262144
--1 -1 2039 1;
+-1 -1 2287 1;
 #X msg 204 59 0;
 #X obj 560 128 table \$0-kk 200;
 #X obj 560 150 table \$0-dir 200;
@@ -810,11 +810,11 @@
 #X obj 181 117 randomF 360;
 #X obj 270 118 randomF 360;
 #X obj 106 140 t f b;
-#X msg 132 165 1359.16;
+#X msg 132 165 6772.15;
 #X obj 176 142 t f b;
-#X msg 202 167 1359.16;
+#X msg 202 167 6772.15;
 #X obj 259 142 t f b;
-#X msg 285 167 1359.16;
+#X msg 285 167 6772.15;
 #X obj 368 85 inlet;
 #X msg 368 113 set \$1;
 #X connect 0 0 6 0;
@@ -1075,7 +1075,7 @@
 #X msg 221 160 0;
 #X obj 165 107 t b b;
 #X obj 127 135 t b b;
-#X msg 153 158 180.81;
+#X msg 153 158 1398.73;
 #X obj 219 76 r \$0-go-speed;
 #X msg 219 99 set \$1;
 #X msg 127 158 1;
@@ -1371,10 +1371,15 @@
 #X obj -80 375 translateXYZ 0 2.6 0;
 #X msg -42 424 text [ Particle=\$3 | No=\$1 ];
 #X msg 14 333 \$1 10000;
-#X obj -80 350 gemhead -1;
 #X msg 56 490 font forgottenfuturistrg.ttf;
 #X obj 56 461 loadbang;
 #X msg -27 488 12;
+#X obj -80 350 gemhead -5;
+#X msg -79 300 set \$1;
+#X obj -79 208 r gemlayer;
+#X obj -79 230 sel 0 1;
+#X msg -79 254 99998;
+#X msg -60 278 -5;
 #X connect 0 0 9 0;
 #X connect 1 0 3 1;
 #X connect 2 0 3 0;
@@ -1399,14 +1404,20 @@
 #X connect 20 0 22 4;
 #X connect 21 0 26 0;
 #X connect 22 0 16 0;
-#X connect 23 0 30 0;
+#X connect 23 0 29 0;
 #X connect 24 0 22 0;
 #X connect 25 0 16 0;
 #X connect 26 0 20 0;
-#X connect 27 0 24 0;
-#X connect 28 0 16 0;
-#X connect 29 0 28 0;
-#X connect 30 0 16 1;
+#X connect 27 0 16 0;
+#X connect 28 0 27 0;
+#X connect 29 0 16 1;
+#X connect 30 0 24 0;
+#X connect 31 0 30 0;
+#X connect 32 0 33 0;
+#X connect 33 0 34 0;
+#X connect 33 1 35 0;
+#X connect 34 0 31 0;
+#X connect 35 0 31 0;
 #X restore 183 252 pd text;
 #N canvas 831 213 566 542 face 0;
 #X obj 7 440 alpha;
@@ -1695,7 +1706,7 @@
 #X connect 25 0 24 1;
 #X restore 347 49 pd move======================;
 #X obj 110 202 hsl 80 15 2000 100 0 0 empty empty speed 5 7 0 10 -262144
--1 -1 7564 1;
+-1 -1 2500 1;
 #X floatatom 53 251 5 0 0 0 - - -;
 #X obj 53 317 s \$0-go-speed;
 #N canvas 667 285 578 356 net======================= 0;
@@ -1946,7 +1957,6 @@
 #X msg 352 -53 \$1 10000;
 #X obj -68 -48 loadbang;
 #X msg -69 -26 0;
-#X obj 192 28 gemhead -1;
 #N canvas 493 477 469 340 control-in 0;
 #X obj 147 -222 r mb-2;
 #X msg 174 -170 0;
@@ -2027,6 +2037,12 @@
 #X connect 14 0 7 0;
 #X restore 315 168 pd scale;
 #X obj 655 -21 k_range 0 1 2000 100;
+#X msg 118 85 set \$1;
+#X obj 118 -7 r gemlayer;
+#X obj 118 15 sel 0 1;
+#X msg 118 39 99998;
+#X msg 137 63 -5;
+#X obj 192 28 gemhead -5;
 #X connect 0 0 133 0;
 #X connect 0 1 1 0;
 #X connect 0 2 2 0;
@@ -2137,7 +2153,7 @@
 #X connect 87 0 6 0;
 #X connect 88 0 5 0;
 #X connect 89 0 4 0;
-#X connect 90 0 141 0;
+#X connect 90 0 140 0;
 #X connect 91 0 80 0;
 #X connect 92 0 91 0;
 #X connect 92 1 63 0;
@@ -2189,13 +2205,19 @@
 #X connect 133 0 3 0;
 #X connect 134 0 12 0;
 #X connect 135 0 136 0;
-#X connect 137 0 113 0;
-#X connect 138 0 57 0;
-#X connect 138 1 139 0;
-#X connect 139 0 78 0;
-#X connect 140 0 86 1;
-#X connect 140 1 8 1;
-#X connect 141 0 3 0;
+#X connect 137 0 57 0;
+#X connect 137 1 138 0;
+#X connect 138 0 78 0;
+#X connect 139 0 86 1;
+#X connect 139 1 8 1;
+#X connect 140 0 3 0;
+#X connect 141 0 146 0;
+#X connect 142 0 143 0;
+#X connect 143 0 144 0;
+#X connect 143 1 145 0;
+#X connect 144 0 141 0;
+#X connect 145 0 141 0;
+#X connect 146 0 113 0;
 #X restore 14 64 pd tempo;
 #X obj 218 388 s data-info;
 #X obj 218 309 r \$0-show;
@@ -2246,7 +2268,7 @@
 #X obj 142 118 f;
 #X obj 170 119 + 1;
 #X obj 198 119 % 2;
-#X obj 100 100 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 100 100 tgl 20 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 197 230 s ch-grid;
 #X obj 194 180 t b;
@@ -2345,7 +2367,7 @@
 #X text 221 172 c-drum;
 #X text 222 148 c-num;
 #X text 221 199 c-walk;
-#N canvas 727 271 540 557 sendtouchosc 1;
+#N canvas 727 271 540 557 sendtouchosc 0;
 #X obj 93 369 s totouch;
 #X obj 93 328 packOSC;
 #X msg 93 305 send /m-b/1 \$1;

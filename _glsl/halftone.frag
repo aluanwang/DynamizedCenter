@@ -1,7 +1,8 @@
 uniform float     iGlobalTime;
 uniform sampler2D iChannel0;  
-uniform float  dotss ;
 
+uniform float  alpha ;
+#define dotss 0.05
 
 float PI = 3.1415926535897932384626433832795;
 float PI180 = float(PI / 180.0);
@@ -44,6 +45,6 @@ void main(void)
 	float avg = 0.4125 * srcPixel.r + 0.3154 * srcPixel.g + 0.2721 * srcPixel.b;
     float gray = (rasterPattern * threshold + avg - threshold) / (1.0 - threshold);
 
-	gl_FragColor = vec4(gray*0.7, gray*0.8, gray, 1.0);
+	gl_FragColor = vec4(gray*0.7, gray*0.8, gray, alpha);
 }
     

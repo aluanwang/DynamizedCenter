@@ -1,11 +1,11 @@
-#N canvas 795 360 578 478 10;
+#N canvas 378 255 578 478 10;
 #X obj 119 76 line;
 #X obj 119 101 insine;
-#X obj 150 216 tabwrite;
-#X obj 150 181 r ch-array;
+#X obj 124 238 tabwrite;
+#X obj 124 203 r ch-array;
 #X obj 119 126 t f b;
 #X obj 147 157 f \$1;
-#X floatatom 222 201 5 0 0 0 - - -;
+#X floatatom 196 223 5 0 0 0 - - -;
 #X obj 119 -34 r t_ui5;
 #X obj 119 -6 sel \$1;
 #X msg 119 44 1 \, 0 \$1;

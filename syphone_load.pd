@@ -1,0 +1,31 @@
+#N canvas 0 22 450 300 10;
+#X msg 216 246 id \$1;
+#X msg 64 192 toPost;
+#X obj 124 118 tof/menubutton 124 25 empty empty 0 grey90 black grey95
+black -1;
+#X msg 217 320 add \$1;
+#X msg 209 341 symbol \$2/\$1;
+#X obj 101 162 t b b b b;
+#X msg 417 235 clear;
+#X obj 101 122 bng 20 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 250 235 unpack f s;
+#X obj 252 273 t b f;
+#X obj 96 242 inlet;
+#X obj 92 370 outlet;
+#X obj 101 83 loadbang;
+#X connect 0 0 11 0;
+#X connect 1 0 11 0;
+#X connect 2 0 8 0;
+#X connect 3 0 2 0;
+#X connect 4 0 3 0;
+#X connect 5 2 1 0;
+#X connect 5 3 6 0;
+#X connect 6 0 2 0;
+#X connect 7 0 5 0;
+#X connect 8 0 9 0;
+#X connect 9 0 5 0;
+#X connect 9 1 0 0;
+#X connect 10 0 4 0;
+#X connect 12 0 7 0;
+#X coords 0 -1 1 1 150 45 1 100 100;
