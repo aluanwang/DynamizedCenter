@@ -1,4 +1,4 @@
-#N canvas 770 111 650 647 10;
+#N canvas 779 76 633 618 10;
 #X declare -lib mrpeach;
 #X declare -path child;
 #X declare -path moving;
@@ -238,7 +238,7 @@
 #X obj 105 -20 r touchosc;
 #X obj 105 4 routeOSC /gemctl/51;
 #X obj 102 101 del 20000;
-#X obj 116 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 116 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 111 333 f;
 #X obj 142 334 + 1;
