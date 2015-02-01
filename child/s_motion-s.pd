@@ -6,10 +6,10 @@
 -1 -1;
 #X obj -44 154 tgl 15 0 empty empty not 16 7 0 10 -262144 -1 -162280
 0 1;
-#N canvas 966 52 726 553 (subpatch) 0;
+#N canvas 172 256 726 553 (subpatch) 1;
 #X obj 104 324 s \$0-pos;
-#X obj 3 0 hsl 75 15 0 2 0 0 empty empty Vel=1.01 8 8 0 10 -262144
--1 -1 3748 1;
+#X obj 3 0 hsl 75 15 0 2 0 0 empty empty Vel=0.44 8 8 0 10 -262144
+-1 -1 1648 1;
 #X obj 77 370 s \$0-pos;
 #X obj 85 0 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
@@ -307,8 +307,17 @@
 #X obj 41 -109 sel 1;
 #X obj 41 -135 spigot;
 #X obj 74 -168 r \$0-show;
-#X obj 41 -86 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 41 -86 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
+#X obj 141 141 s tocloud;
+#X obj 349 -11 route key_29;
+#X obj 349 13 sel 1;
+#X obj 349 -85 t a a;
+#X obj 349 -43 spigot;
+#X obj 384 -64 route key_226;
+#X obj 349 -111 r \$0-gemkey;
+#X obj 348 43 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
 #X connect 1 0 14 0;
 #X connect 1 0 20 0;
 #X connect 1 0 34 0;
@@ -317,6 +326,7 @@
 #X connect 3 0 27 0;
 #X connect 3 0 33 0;
 #X connect 3 0 35 0;
+#X connect 3 0 45 0;
 #X connect 4 0 16 0;
 #X connect 5 0 10 0;
 #X connect 5 1 9 0;
@@ -358,6 +368,14 @@
 #X connect 42 0 41 0;
 #X connect 43 0 42 1;
 #X connect 44 0 3 0;
+#X connect 46 0 47 0;
+#X connect 47 0 52 0;
+#X connect 48 0 49 0;
+#X connect 48 1 50 0;
+#X connect 49 0 46 0;
+#X connect 50 0 49 1;
+#X connect 51 0 48 0;
+#X connect 52 0 3 0;
 #X coords 0 1 100 -1 100 15 2 0 0;
 #X restore 4 101 graph;
 #X floatatom 279 177 3 0 0 0 - - -;
@@ -1152,8 +1170,8 @@
 #X connect 38 1 32 0;
 #X restore -148 214 pd set-origon;
 #N canvas 378 401 557 348 (subpatch) 0;
-#X obj 3 0 hsl 75 15 0.05 6 0 0 empty empty num=1 8 8 0 10 -262144
--1 -1 1182 1;
+#X obj 3 0 hsl 75 15 0.05 6 0 0 empty empty num=2.68 8 8 0 10 -262144
+-1 -1 3282 1;
 #X floatatom 0 22 5 0 0 0 - - -;
 #X obj -77 161 s toudp;
 #X obj -77 135 packOSC;
@@ -1212,8 +1230,8 @@
 #X obj 222 -49 r sphere-signal;
 #X obj 170 -3 s \$0-gemkey;
 #N canvas 784 240 656 425 (subpatch) 0;
-#X obj 3 0 hsl 75 15 0.01 1 0 0 empty empty point=0.37 5 7 0 10 -262144
--1 -1 2749 1;
+#X obj 3 0 hsl 75 15 0.01 1 0 0 empty empty point=0.23 5 7 0 10 -262144
+-1 -1 1649 1;
 #X obj -31 1 tgl 14 0 empty show-tgl2 empty 0 -6 0 10 -1 -1 -262144
 0 1;
 #X floatatom 126 103 5 0 0 0 - - -;
@@ -1338,7 +1356,7 @@
 #X obj 332 -415 t b b b;
 #X obj 363 -274 spigot;
 #X obj 396 -294 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 359 -338 t f f;
 #X floatatom 363 -248 5 0 0 0 - - -;
 #X obj 445 -359 spigot;
@@ -1684,7 +1702,7 @@
 #X restore -114 -76 pd tempo;
 #N canvas 155 413 450 300 (subpatch) 0;
 #X obj 3 0 hsl 75 15 1 2 0 0 empty empty width 8 8 0 10 -262144 -1
--1 2240 1;
+-1 2840 1;
 #X obj -25 106 s toudp;
 #X obj -25 80 packOSC;
 #X msg -25 53 send /s-a4 \$1;
@@ -1706,7 +1724,7 @@
 #N canvas 0 22 450 300 (subpatch) 0;
 #X obj 0 -51 inlet;
 #X obj 3 0 hsl 75 15 1 2 0 0 empty empty hight 8 8 0 10 -262144 -1
--1 2440 1;
+-1 2140 1;
 #X obj 76 130 s toudp;
 #X obj 76 104 packOSC;
 #X msg 76 78 send /s-a3 \$1;

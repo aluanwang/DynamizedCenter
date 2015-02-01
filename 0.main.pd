@@ -1,4 +1,4 @@
-#N canvas 779 76 633 618 10;
+#N canvas 705 101 638 625 10;
 #X declare -lib mrpeach;
 #X declare -path child;
 #X declare -path moving;
@@ -19,8 +19,6 @@
 #X obj 110 -135 k_cpu;
 #X obj -395 -205 s_motion-u;
 #X obj 111 -6 s_motion-b;
-#X obj -395 246 vj_worm;
-#X obj -396 208 vj_ocean;
 #N canvas 373 214 712 538 (subpatch) 0;
 #X obj 71 -87 r hid;
 #X obj 100 72 zexy/list2symbol;
@@ -121,10 +119,10 @@
 #X obj 119 196 s trigger3d;
 #X text 548 -61 option+shift;
 #X obj 436 -61 route key_226;
-#X obj 403 -14 route key_225;
 #X obj 119 174 change;
 #X obj 383 185 k_range 0 1 -1 1;
 #X obj 497 148 k_range 0 1 -1 1;
+#X obj 403 -14 route key_224;
 #X connect 0 0 2 0;
 #X connect 1 0 3 0;
 #X connect 2 0 10 0;
@@ -141,7 +139,7 @@
 #X connect 9 0 26 0;
 #X connect 9 0 45 1;
 #X connect 9 0 48 1;
-#X connect 9 0 57 0;
+#X connect 9 0 56 0;
 #X connect 10 0 6 0;
 #X connect 10 1 1 0;
 #X connect 10 1 35 0;
@@ -176,15 +174,15 @@
 #X connect 38 0 39 0;
 #X connect 39 0 40 0;
 #X connect 39 1 55 0;
-#X connect 40 0 56 0;
+#X connect 40 0 59 0;
 #X connect 41 0 43 0;
 #X connect 42 0 44 0;
 #X connect 43 0 46 0;
 #X connect 44 0 47 0;
 #X connect 45 0 13 0;
 #X connect 45 0 17 0;
-#X connect 46 0 58 0;
-#X connect 47 0 59 0;
+#X connect 46 0 57 0;
+#X connect 47 0 58 0;
 #X connect 48 0 36 0;
 #X connect 49 0 9 0;
 #X connect 50 0 49 0;
@@ -193,10 +191,10 @@
 #X connect 52 0 51 0;
 #X connect 55 0 40 1;
 #X connect 55 0 52 0;
-#X connect 56 0 50 0;
-#X connect 57 0 53 0;
-#X connect 58 0 45 0;
-#X connect 59 0 48 0;
+#X connect 56 0 53 0;
+#X connect 57 0 45 0;
+#X connect 58 0 48 0;
+#X connect 59 0 50 0;
 #X coords 0 -1 1 1 120 20 2 100 100;
 #X restore 110 -158 pd;
 #N canvas 338 85 656 671 friend 0;
@@ -238,7 +236,7 @@
 #X obj 105 -20 r touchosc;
 #X obj 105 4 routeOSC /gemctl/51;
 #X obj 102 101 del 20000;
-#X obj 116 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 116 278 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 111 333 f;
 #X obj 142 334 + 1;
@@ -329,13 +327,9 @@
 #X restore 172 -177 pd friend;
 #X obj -83 281 planet;
 #X obj -395 13 k_win;
-#X obj -395 323 vj_nebulas 16;
-#X obj -281 323 vj_drawmodel;
 #X obj -167 281 ship;
-#X obj -281 246 vj_neontrails;
-#X obj -395 284 vj_sun 14;
 #X obj 109 -196 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X text -158 246 832 665;
 #X text -158 261 480 384;
 #N canvas 190 587 793 332 syphon 0;
@@ -363,7 +357,7 @@
 #X text 389 -38 leapmotion;
 #X obj 235 -69 loadbang;
 #X msg 235 -47 0;
-#X obj 235 -6 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 235 -6 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 263 -46 inlet;
 #X obj 235 51 syphonserver aluan_pd;
@@ -509,14 +503,19 @@
 #X connect 39 0 36 0;
 #X connect 40 0 36 0;
 #X restore 109 -177 pd syphon;
-#X obj -282 206 vj_cloud;
 #X obj -5 -192 k_ui;
 #X obj -107 14 k_effect;
 #X obj 111 -70 k_udp;
-#X obj -281 362 vj_spacedot;
+#X obj -164 362 vj_spacedot;
 #X obj 111 118 s_motion-r;
+#X obj -281 323 vj_maze;
+#X obj -395 246 vj_worm;
+#X obj -396 208 vj_ocean;
+#X obj -395 323 vj_nebulas 16;
+#X obj -280 362 vj_drawmodel;
+#X obj -281 246 vj_neontrails;
+#X obj -395 284 vj_sun 14;
+#X obj -282 206 vj_cloud;
 #X obj -394 362 vj_drawmodel_2;
-#X obj -167 356 k_time;
-#X obj -281 284 vj_grid 13;
-#X obj -48 363 vj_maze;
-#X connect 17 0 20 0;
+#X obj -281 284 vj_grid 16;
+#X connect 11 0 14 0;

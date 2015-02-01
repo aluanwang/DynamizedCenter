@@ -99,7 +99,7 @@
 #X connect 9 0 10 0;
 #X connect 11 0 12 0;
 #X restore 428 378 pd copy_end;
-#X obj 320 305 tgl 30 0 empty empty G 10 15 0 15 -191407 -1 -1 1 1
+#X obj 320 305 tgl 30 0 empty empty G 10 15 0 15 -191407 -1 -1 0 1
 ;
 #X obj 195 71 loadbang;
 #N canvas 607 122 921 630 loadbang 0;
@@ -266,11 +266,11 @@
 #X coords 0 -1 1 1 20 20 2 100 100;
 #X restore 195 196 pd loadbang;
 #X obj 108 183 hsl 80 15 0.05 1 0 0 empty empty face 5 7 0 10 -262144
--1 -1 3432 1;
+-1 -1 0 1;
 #X obj 108 201 hsl 80 15 0.1 4 0 0 empty empty connect 5 6 0 10 -262144
--1 -1 3300 1;
+-1 -1 0 1;
 #X obj 108 165 hsl 80 15 0 0.8 0 0 empty empty length 5 6 0 10 -262144
--1 -1 5699 1;
+-1 -1 0 1;
 #X obj 389 298 metro 2000;
 #X obj 451 38 table \$0-theta_start 200;
 #X obj 451 58 table \$0-theta_end 200;
@@ -283,7 +283,7 @@
 #N canvas 766 178 544 477 (subpatch) 0;
 #X obj 1 88 s \$0-size;
 #X obj 3 0 hsl 80 15 1 40 0 0 empty empty N=26 8 8 0 10 -262144 -1
--1 5100 1;
+-1 0 1;
 #X obj 0 33 int;
 #X obj -36 115 outlet;
 #X msg 69 61 label N=\$1;
@@ -357,19 +357,19 @@
 #X connect 33 0 31 0;
 #X coords 0 1 100 -1 85 15 1 0 0;
 #X restore 105 125 graph;
-#X obj 108 145 hsl 80 15 0.01 8 0 0 empty empty radius 5 6 0 10 -262144
--1 -1 4979 1;
+#X obj 108 146 hsl 80 15 0.01 8 0 0 empty empty radius 5 6 0 10 -262144
+-1 -1 0 1;
 #X msg 195 94 0;
-#X floatatom 63 262 5 0 0 0 - - -;
-#X floatatom 63 241 5 0 0 0 - - -;
+#X floatatom 63 252 5 0 0 0 - - -;
+#X floatatom 113 234 5 0 0 0 - - -;
 #X floatatom 62 281 5 0 0 0 - - -;
 #X floatatom 62 300 5 0 0 0 - - -;
 #X obj 389 321 t b b b;
 #X obj 320 342 s \$0-go;
 #X obj 389 246 r \$0-go;
-#X obj 195 122 tgl 20 0 empty empty H 6 10 0 14 -258113 -1 -1 1 1;
+#X obj 195 122 tgl 20 0 empty empty H 6 10 0 14 -258113 -1 -1 0 1;
 #X obj 249 125 s \$0-show;
-#X obj 389 274 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 389 274 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 389 400 s \$0-start;
 #N canvas 272 39 994 726 tempo 0;
@@ -397,13 +397,13 @@
 #X obj -81 -226 change;
 #X obj -81 -204 sel 1;
 #X obj -81 -181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj -48 -294 route key_226;
 #X obj -81 -248 route key_21 key_15 key_9 key_6;
 #X obj -36 -226 change;
 #X obj -36 -204 sel 1;
 #X obj -36 -181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-1 1;
+0 1;
 #X obj 10 -226 change;
 #X obj 10 -204 sel 1;
 #X obj 10 -181 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
@@ -1928,7 +1928,7 @@
 #X connect 154 0 150 0;
 #X restore 113 4 pd motion============;
 #X floatatom 256 6 5 0 0 0 - - -;
-#N canvas 199 221 621 563 net======================= 1;
+#N canvas 199 221 621 563 net======================= 0;
 #X obj 34 129 s toudp;
 #X obj 34 103 packOSC;
 #X obj 127 130 s toudp;
@@ -1957,7 +1957,7 @@
 #X text 73 162 face;
 #X text 171 33 radius;
 #X text 167 167 link-num;
-#X obj 26 309 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 26 309 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 26 364 f;
 #X obj 56 364 + 1;
@@ -2033,7 +2033,7 @@
 #X obj 406 271 packOSC;
 #X obj 406 210 v \$0-link-num;
 #X msg 406 242 send /mr-7 \$1;
-#X obj 460 153 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 460 153 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 460 125 r \$0-go;
 #X obj 460 176 metro 50;
@@ -2079,6 +2079,8 @@
 #X connect 46 0 29 0;
 #X connect 47 0 48 0;
 #X restore 113 32 pd net=======================;
+#X msg 9 202 \$1 1000;
+#X obj 8 229 line;
 #X connect 3 0 26 0;
 #X connect 4 0 20 0;
 #X connect 4 0 42 0;
@@ -2090,11 +2092,11 @@
 #X connect 8 0 57 2;
 #X connect 9 0 25 0;
 #X connect 18 0 57 0;
-#X connect 19 0 22 0;
-#X connect 19 0 57 1;
+#X connect 19 0 61 0;
 #X connect 20 0 28 0;
 #X connect 21 0 36 0;
 #X connect 22 0 35 0;
+#X connect 22 0 57 1;
 #X connect 23 0 34 0;
 #X connect 24 0 33 0;
 #X connect 25 0 31 0;
@@ -2131,4 +2133,6 @@
 #X connect 52 7 5 0;
 #X connect 58 0 60 0;
 #X connect 58 1 59 0;
+#X connect 61 0 62 0;
+#X connect 62 0 22 0;
 #X coords 0 -1 1 1 120 120 1 100 100;
